@@ -1906,7 +1906,7 @@ function getBloques($zona, $tipo=1)
 				case "contador_visitas";
 
 					$mysqlUser = "gestion_user";
-					$mysqlPwd = "n@hF0z460";
+					$mysqlPwd = "ges569";
 					$dbname = "gestion";
 					$conexGestion = mysql_connect('localhost', $mysqlUser, $mysqlPwd);
 					mysql_select_db($dbname,$conexGestion);
