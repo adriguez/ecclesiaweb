@@ -4,7 +4,7 @@ ini_set("error_reporting",E_ALL);
 
 
 $mysqlUser = "web_user";
-$mysqlPwd = "web321";
+$mysqlPwd = "4z5G13l%r";
 
 $dbname = "web";
 
