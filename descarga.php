@@ -21,14 +21,14 @@
 				$archivo = str_replace("uploads/","",$archivo);
 			}
 
-			if(substr_count($archivo, "web.mintrared.es/") > 0)
+			if(substr_count($archivo, "web.mintrared.com/") > 0)
 			{
 				$archivo = explode("/",$archivo);
 				$archivo = $targetDir.$archivo[4]."/".$archivo[5];
 				$withUrl = true;
 			}
 			else{
-				$archivo = "http://web.mintrared.es/".str_replace(RUTA_WEB_BASE,"",$targetDir).$archivo;
+				$archivo = "http://web.mintrared.com/".str_replace(RUTA_WEB_BASE,"",$targetDir).$archivo;
 			}
 
 			$archivo = trim($archivo);
@@ -48,10 +48,10 @@
 				$archivo = str_replace($targetDirAlt, "", $archivo);
 				switch($dir){
 					case "documentos";
-						$archivo = "http://web.mintrared.es/documentos/".$archivo;
+						$archivo = "http://web.mintrared.com/documentos/".$archivo;
 					break;
 					case "uploads";
-						$archivo = "http://web.mintrared.es/uploads/".$parroquia."/".$archivo;
+						$archivo = "http://web.mintrared.com/uploads/".$parroquia."/".$archivo;
 					break;
 				}
 			}

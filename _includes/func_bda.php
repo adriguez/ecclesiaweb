@@ -45,14 +45,14 @@ function getDonativosBotones($template=0){
 				$bizumImg = "bizum_img";
 			}
 
-			if($idparroquia == 1920) $donativosHtml .= "<img src=\"https://web.mintrared.es/images/donativos/$paypalImg\" /><br><a href=\"".$fila['valor']."\" class=\"btn btn-default\"  style=\"color:#fff !important;\" target=\"_blank\">Suscribirme</a></div>";
+			if($idparroquia == 1920) $donativosHtml .= "<img src=\"https://web.mintrared.com/images/donativos/$paypalImg\" /><br><a href=\"".$fila['valor']."\" class=\"btn btn-default\"  style=\"color:#fff !important;\" target=\"_blank\">Suscribirme</a></div>";
 			else{
 
 				$url = $fila['valor'];
 				if(substr($fila['valor'], 0, 6) == "https:") $fila['valor'] = "<a href=\"".$fila['valor']."\" target=\"_blank\">".$fila['valor']."</a>";
 
-				if(substr($url, 0, 6) == "https:") $donativosHtml .= "<a href=\"".$url."\" target=\"_blank\"><img src=\"https://web.mintrared.es/images/donativos/".$bizumImg.".png\" /></a><br>".$fila['valor'];
-				else $donativosHtml .= "<img src=\"https://web.mintrared.es/images/donativos/".$bizumImg.".png\" /><br>".$fila['valor'];
+				if(substr($url, 0, 6) == "https:") $donativosHtml .= "<a href=\"".$url."\" target=\"_blank\"><img src=\"https://web.mintrared.com/images/donativos/".$bizumImg.".png\" /></a><br>".$fila['valor'];
+				else $donativosHtml .= "<img src=\"https://web.mintrared.com/images/donativos/".$bizumImg.".png\" /><br>".$fila['valor'];
 				$donativosHtml .= "</div>\n";
 			}
 
@@ -64,7 +64,7 @@ function getDonativosBotones($template=0){
 			if($idparroquia == 376) $transImg = "banco_general";
 			else if($idparroquia == 1110) $transImg = "banco_mercantil_padua";
 			else $transImg = "transferencia_img";
-            $donativosHtml .= "<img src=\"https://web.mintrared.es/images/donativos/".$transImg.".png\" /><br>".$fila['valor'];
+            $donativosHtml .= "<img src=\"https://web.mintrared.com/images/donativos/".$transImg.".png\" /><br>".$fila['valor'];
             $donativosHtml .= "</div>\n";
           }
           else if($fila['tipo'] == "paypal" && $fila['valor'] != ""){
@@ -79,9 +79,9 @@ function getDonativosBotones($template=0){
 			else $paypalImg = "paypal_img.png";
 
             $donativosHtml .= "<div class=\"col-md-".$col."\" $styleExtra>\n";
-            if($idparroquia == 1110) $donativosHtml .= "<img src=\"https://web.mintrared.es/images/donativos/$paypalImg\" /><br>".$fila['valor']."";
-			else if($idparroquia == 1920) $donativosHtml .= "<img src=\"https://web.mintrared.es/images/donativos/$paypalImg\" /></a><br><a href=\"".$fila['valor']."\" style=\"color:#fff !important;\" class=\"btn btn-default\" target=\"_blank\">Suscribirme</a>";
-			else $donativosHtml .= "<a href=\"".$fila['valor']."\" target=\"_blank\"><img src=\"https://web.mintrared.es/images/donativos/$paypalImg\" /></a><br><a $linkStyle href=\"".$fila['valor']."\" target=\"_blank\">".$fila['valor']."</a>";
+            if($idparroquia == 1110) $donativosHtml .= "<img src=\"https://web.mintrared.com/images/donativos/$paypalImg\" /><br>".$fila['valor']."";
+			else if($idparroquia == 1920) $donativosHtml .= "<img src=\"https://web.mintrared.com/images/donativos/$paypalImg\" /></a><br><a href=\"".$fila['valor']."\" style=\"color:#fff !important;\" class=\"btn btn-default\" target=\"_blank\">Suscribirme</a>";
+			else $donativosHtml .= "<a href=\"".$fila['valor']."\" target=\"_blank\"><img src=\"https://web.mintrared.com/images/donativos/$paypalImg\" /></a><br><a $linkStyle href=\"".$fila['valor']."\" target=\"_blank\">".$fila['valor']."</a>";
             $donativosHtml .= "</div>\n";
           }
       }
@@ -2109,7 +2109,7 @@ function getBloques($zona, $tipo=1)
 				break;
 
 				case "casa_comun";
-					$devuelve .= "<a href=\"https://parroquiaespiritusanto.ecclesiared.com/casa-comun/2233/\"><img src=\"https://web.mintrared.es/uploads/316/casa_comun.jpeg\" /></a>\n";
+					$devuelve .= "<a href=\"https://parroquiaespiritusanto.ecclesiared.com/casa-comun/2233/\"><img src=\"https://web.mintrared.com/uploads/316/casa_comun.jpeg\" /></a>\n";
 				break;
 
 				case "ubicacion_parroquia";
@@ -2317,8 +2317,8 @@ function getInfoPagina($bloque){
 
 		if($idPagina == 673) $texto = "<br><br>".$texto;
 
-		if($idPagina == 1946) $texto = "<a href=\"$linkPagina\"><img src=\"https://web.mintrared.es/uploads/65/bautismos_gema.jpg\" style=\"width:100%;\" /></a>";
-		else if($idPagina == 1133) $texto = "<a href=\"$linkPagina\"><img src=\"https://web.mintrared.es/uploads/65/catequesis_gema.jpg\" style=\"width:100%;\" /></a>";
+		if($idPagina == 1946) $texto = "<a href=\"$linkPagina\"><img src=\"https://web.mintrared.com/uploads/65/bautismos_gema.jpg\" style=\"width:100%;\" /></a>";
+		else if($idPagina == 1133) $texto = "<a href=\"$linkPagina\"><img src=\"https://web.mintrared.com/uploads/65/catequesis_gema.jpg\" style=\"width:100%;\" /></a>";
 
 		$html = "<p style=\"text-align:justify;padding:8px;\">".$texto."</p>
 		<div style=\"clear:both;\"></div><p class=\"links linksgal\"><a href=\"$linkPagina\" class=\"more moregal\">Seguir leyendo</a></p><div style=\"clear:both;\"></div>";

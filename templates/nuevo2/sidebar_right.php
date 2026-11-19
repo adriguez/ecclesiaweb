@@ -161,11 +161,11 @@ if($idparroquia == 427){
 
 	<p style="font-size: 18px;text-align: center;"><br>Instagram Juventud Evangelista</p>
 
-	<a href="https://www.instagram.com/juventud_evangelista/" target="_blank"><img src="https://web.mintrared.es/images/instagram_logo.png" /></a>
+	<a href="https://www.instagram.com/juventud_evangelista/" target="_blank"><img src="https://web.mintrared.com/images/instagram_logo.png" /></a>
 
 	<p style="font-size: 18px;text-align: center;"><br>Instagram San Juan Evangelista</p>
 
-	<a href="https://www.instagram.com/psan.juanevangelista" target="_blank"><img src="https://web.mintrared.es/images/instagram_logo.png" /></a>
+	<a href="https://www.instagram.com/psan.juanevangelista" target="_blank"><img src="https://web.mintrared.com/images/instagram_logo.png" /></a>
 
 
 	</div>

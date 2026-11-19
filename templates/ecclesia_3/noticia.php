@@ -196,7 +196,7 @@ if($idnoticia == 18871){
 
             $foto = $rw['foto'];
 
-            $urlOrigen='http://web.mintrared.es/';
+            $urlOrigen='http://web.mintrared.com/';
 
             $fotoThumb = $urlOrigen."uploads/$idparroquia/big_".$foto;
 
