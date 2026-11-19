@@ -50,7 +50,7 @@ if($exp[0] == "www")
 	}
 	else exit();
 }
-else if($exp[1] == "ecclesiared" || $exp[1] == "parroquiasandiego" || $exp[0] == "smaria" || $exp[1] == "diocesisdeacariguaaraure" || $exp[1] == "diocesisdecaguas" || $exp[1] == "parroquiapatriarcasanjose" || $exp[1] == "diocesisdecartagocostarica" || $exp[1] == "iglesiadecalama" || $exp[1] == "vicariatoesmeraldas" || $exp[1] == "diocesisdecoatzacoalcos" || $exp[1] == "diocesisdesoacha" || $exp[1] == "diocesisdelimon" || $exp[1] == "arquidiocesisdeportoviejo" || $exp[1] == "diocesisdegirardota" || $exp[1] == "parroquiadecartagena" || $exp[1] == "xn--vicariatouflodechavez-kbc" || $exp[1] == "dehonianos" || $exp[1] == "diocesisdelaceiba")
+else if(($exp[1] == "mintrared" && $exp[0] != "web" && $exp[0] != "gestion") || $exp[1] == "ecclesiared" || $exp[1] == "parroquiasandiego" || $exp[0] == "smaria" || $exp[1] == "diocesisdeacariguaaraure" || $exp[1] == "diocesisdecaguas" || $exp[1] == "parroquiapatriarcasanjose" || $exp[1] == "diocesisdecartagocostarica" || $exp[1] == "iglesiadecalama" || $exp[1] == "vicariatoesmeraldas" || $exp[1] == "diocesisdecoatzacoalcos" || $exp[1] == "diocesisdesoacha" || $exp[1] == "diocesisdelimon" || $exp[1] == "arquidiocesisdeportoviejo" || $exp[1] == "diocesisdegirardota" || $exp[1] == "parroquiadecartagena" || $exp[1] == "xn--vicariatouflodechavez-kbc" || $exp[1] == "dehonianos" || $exp[1] == "diocesisdelaceiba")
 {
 	// OPCIÓN 3, ESTAMOS EN SUBDOMINIO DE ECCLESIA.
 
