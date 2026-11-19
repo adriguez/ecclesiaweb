@@ -26,7 +26,7 @@ if(mysql_num_rows($result) > 0)
 					<div class=\"titulo boxtitle".$rw['tipo']."\">PASTORAL PROFÉTICA</div>
 					
 					<div class=\"content-bloque bloqueshome\">
-						<a href=\"".$urlOri."categoria-pastoral-profetica/422/\"><img src=\"https://web.mintrared.com/uploads/571/profetica.jpg\" /></a>
+						<a href=\"".$urlOri."categoria-pastoral-profetica/422/\"><img src=\"https://web.mintrared.es/uploads/571/profetica.jpg\" /></a>
 					</div>\n
 				<div class=\"bottom-home-osc\"></div></div>";
 		}
@@ -79,7 +79,7 @@ if(mysql_num_rows($result) > 0)
 				
 				<div class=\"content-bloque bloqueshome\">
 				<a href=\"https://www.xn--ascensionseorsesea-x0bg.com/hoja-parroquial/2210/\">
-					<img src=\"https://web.mintrared.com/uploads/1667/secciones/".getValue("SELECT foto FROM secciones_fotos WHERE idseccion = 2210 ORDER BY idfoto ASC LIMIT 1",1)."\" />
+					<img src=\"https://web.mintrared.es/uploads/1667/secciones/".getValue("SELECT foto FROM secciones_fotos WHERE idseccion = 2210 ORDER BY idfoto ASC LIMIT 1",1)."\" />
 				</a>
 				</div>\n
 			<div class=\"bottom-home-osc\"></div></div>";

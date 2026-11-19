@@ -4,42 +4,42 @@ RewriteEngine on
 RewriteRule ^auxiliares-parroquiales-de-cristo-sacerdote.html$ index.php?sec=especial [QSA]
 
 # CATEGORIAS NOTICIAS
-# http://web.mintrared.com/categoria-comunicados/2/
+# http://web.mintrared.es/categoria-comunicados/2/
 
 RewriteRule ^categoria-([0-9a-z-.]+)/([0-9]+)/?$ index.php?sec=noticias&cat=$2 [QSA]
 
 # ARCHIVO NOTICIAS
-# http://web.mintrared.com/archivo/01/2012/
+# http://web.mintrared.es/archivo/01/2012/
 
 RewriteRule ^archivo/([0-9]+)/([0-9]+)/?$ index.php?sec=noticias&archivo=1&mes=$1&anyo=$2 [QSA]
 
 # PAGINAS ESTÁTICAS
-# http://web.mintrared.com/la-parroquia/3/
+# http://web.mintrared.es/la-parroquia/3/
 
 RewriteRule ^([0-9a-z-._]+)/([0-9]+)/?$ index.php?sec=estaticas&m=$2 [QSA]
 RewriteRule ^([0-9a-z-._]+)/([0-9]+)/carpeta-([0-9]+)/?$ index.php?sec=estaticas&m=$2&carpeta=$3 [QSA]
 
 # NOTICIAS
-# http://web.mintrared.com/noticia-de-prueba-3.html
+# http://web.mintrared.es/noticia-de-prueba-3.html
 
 RewriteRule ^(.*)-([0-9]+).html$ index.php?sec=noticia&m=$2 [QSA]
 
 # GALERIA
-# http://web.mintrared.com/galeria-fotografica.html
+# http://web.mintrared.es/galeria-fotografica.html
 
 RewriteRule ^galeria-fotografica.html$ index.php?sec=galeria [QSA]
 RewriteRule ^galeria-(.*)_([0-9]+).html$ index.php?sec=galeria&m=$2 [QSA]
 
 # EVENTOS
-# http://web.mintrared.com/eventos.html
+# http://web.mintrared.es/eventos.html
 
 RewriteRule ^eventos.html$ index.php?sec=eventos [QSA]
 RewriteRule ^eventos/([0-9]+)-([0-9]+)-([0-9]+)/?$ index.php?sec=eventos&act=viewevents&dia=$1&mes=$2&anyo=$3 [QSA]
 
 # LITURGIA
-# http://web.mintrared.com/liturgia.html
-# http://web.mintrared.com/liturgia/02-02-2012/
-# http://web.mintrared.com/liturgia/02-02-2012/oficio-de-lectura_1/
+# http://web.mintrared.es/liturgia.html
+# http://web.mintrared.es/liturgia/02-02-2012/
+# http://web.mintrared.es/liturgia/02-02-2012/oficio-de-lectura_1/
 
 RewriteRule ^liturgia.html$ index.php?sec=liturgia [QSA]
 RewriteRule ^liturgia/([0-9]+)-([0-9]+)-([0-9]+)/?$ index.php?sec=liturgia&dia=$1&mes=$2&anyo=$3 [QSA]

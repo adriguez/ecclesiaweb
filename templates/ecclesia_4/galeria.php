@@ -157,7 +157,7 @@
 
             $foto = $rw['foto'];
 
-            $urlOrigen='http://web.mintrared.com/';
+            $urlOrigen='http://web.mintrared.es/';
 
             $fotoThumb = $urlOrigen."uploads/$idparroquia/big_".$foto;
 

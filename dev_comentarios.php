@@ -92,7 +92,7 @@
 						$sql = "SELECT id, email FROM usuarios WHERE modulos LIKE '%9;%' AND parroquia = $idparroquia";
 						$rs = mysql_query($sql,$conex) or die (mysql_error());
 
-						$urlValida = "https://gestion.mintrared.com/new/web.php?sec=comentarios&act=1&id=".$idCom;
+						$urlValida = "https://gestion.mintrared.es/new/web.php?sec=comentarios&act=1&id=".$idCom;
 
 						if(mysql_num_rows($rs) > 0)
 						{

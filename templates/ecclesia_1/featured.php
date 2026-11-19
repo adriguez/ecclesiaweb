@@ -102,7 +102,7 @@ while($rw = mysql_fetch_assoc($result))
 			
 				$val = getValue("SELECT * FROM galeria_fotos WHERE categoria = '1182' AND parroquia = '1013' ORDER BY id DESC LIMIT 1",0);
 
-				//http://web.mintrared.com/uploads/1013/big_p1frk502g41odb1sdqmfqjj21ad14.jpg
+				//http://web.mintrared.es/uploads/1013/big_p1frk502g41odb1sdqmfqjj21ad14.jpg
 				$urlImagen = $urlRecursos."uploads/".$idparroquia."/big_".$val['foto'];
 
 				echo "<a href=\"$urlImagen\" class=\"fancybox-thumb\" rel=\"fancybox-thumb\"><img src=\"$urlImagen\" style=\"border:none;border-radius:0%;padding:0;margin:0;width:100%;\" /></a>";

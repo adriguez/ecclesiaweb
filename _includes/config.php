@@ -100,8 +100,8 @@ else if($exp[1] == "ecclesiared" || $exp[1] == "parroquiasandiego" || $exp[0] ==
 
 $extPermitidas = array(".jpg",".jpeg",".png",".gif", ".bmp");
 //if(in_array($idparroquia, $httpsParroquias))
-$urlRecursos = "https://web.mintrared.com/";
-//else $urlRecursos = "http://web.mintrared.com/";
+$urlRecursos = "https://web.mintrared.es/";
+//else $urlRecursos = "http://web.mintrared.es/";
 
 // ****** DATOS CONEXIÓN MAIL PARA ENVIAR.
 

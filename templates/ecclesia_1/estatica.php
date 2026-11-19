@@ -243,7 +243,7 @@
 					if($idparroquia == 73){ 
 
 						echo "<h3>DONATIVO EXTRAORDINARIO AYUDA REHABILITACIÓN CUBIERTA ARCIPRESTAL</h3>
-						<img src=\"https://web.mintrared.com/uploads/73/cupula_obispo.jpg\" style=\"width:100%;\" /><br>
+						<img src=\"https://web.mintrared.es/uploads/73/cupula_obispo.jpg\" style=\"width:100%;\" /><br>
 						<div class=\"text-noticia\"><p style=\"font-weight:bold;text-align: justify;\">Ha dado comienzo la primera fase de la rehabilitación de la cubierta de la Arciprestal, ahora más que nunca, necesitamos tu ayuda. Haz tu donativo único extraordinario para dicha causa en el siguiente botón.</p></div>";
 
 						echo '<div align="center">
@@ -356,7 +356,7 @@
 
 						<?php if($idpagina == 1461){
 							
-							$fichero = file_get_contents('https://web.mintrared.com/uploads/852/secciones/historia.html', true);
+							$fichero = file_get_contents('https://web.mintrared.es/uploads/852/secciones/historia.html', true);
 							echo $fichero;
 						?>
 						
