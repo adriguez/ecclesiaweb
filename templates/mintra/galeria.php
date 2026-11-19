@@ -1,0 +1,167 @@
+<?php if(!isset($_GET['m'])){ ?>
+
+			<div class="post">
+				<h2 class="title">Galerías fotográficas</h2>
+				<p class="byline"><?=$nombreParroquia;?></p>
+			</div>
+
+			<div style="padding:10px;">
+			<?php
+
+				$bucle = getGalerias($idparroquia);
+				$conta = 0;
+
+				if(mysql_num_rows($bucle) > 0)
+				{
+					while($rw = mysql_fetch_assoc($bucle))
+					{
+
+						$idgal = $rw['id'];
+						$categoria = stripslashes($rw['categoria']);
+						$fecha = date('d/m/Y G:i',strtotime($rw['fecha']));
+						$numfotos = intval($rw['numfotos']);
+
+						$foto = getValue("SELECT foto FROM galeria_fotos WHERE foto != '' AND categoria = $idgal ORDER BY orden ASC LIMIT 1",1);
+
+						$foto = $urlRecursos."uploads/$idparroquia/thb_".$foto;
+
+						$urlGal = $urlOri."galeria-".limpiarCadena($categoria,'archivo')."_".$idgal.".html";
+
+						if($conta%2==0) echo "<div class=\"row\">";
+
+						$conta++;
+			?>
+
+					<div class="col-lg-6">
+
+						<div class="gal text-center">
+
+							<a href="<?=$urlGal;?>">
+								<img align="center" src="<?=$foto;?>" alt="<?=$categoria;?>" />
+								<span class="titulo"><?=$categoria;?></span>
+								<span class="ultfecha">Última actualización: <?=$fecha;?></span>
+							</a>
+
+						</div>
+
+					</div>
+
+				<?php if($conta%2==0) echo "</div>"; } ?>
+
+				<?php if($conta%2==1) echo "</div>"; ?>
+
+			</div>
+
+				<p class="copyy" style="clear:both;"><b>Todos los derechos de imágenes quedan reservados al ser propiedad de la parroquia <?=getValue("SELECT titulo_logo FROM configuracion_base WHERE parroquia = $idparroquia",1);?></b></p>
+
+
+				<?php
+				}
+				else echo "<h2 style=\"text-align:center;font-weight:normal;margin:10px;\">No existen galerías.</h2></div>";
+
+			?>
+
+
+<?php }else{ 
+
+	$idgaleria = intval($_GET['m']);
+
+	$titulo = getValue("SELECT categoria, especial FROM galeria_categorias WHERE parroquia = $idparroquia AND id = $idgaleria",0);
+	$especial = $titulo[1];
+	$titulo = $titulo[0];
+
+?>
+			<div class="post">
+				<h2 class="title"><?=$titulo;?></h2>
+				<p class="byline"><?=$nombreParroquia;?></p>
+			</div>
+
+			<?php
+
+				$bucle = getGaleria($idparroquia, $idgaleria);
+
+				if(mysql_num_rows($bucle) > 0)
+				{
+
+						$conta = 0;
+
+					while($rw = mysql_fetch_assoc($bucle))
+					{
+
+						$idgal = $rw['id'];
+						$tituloFoto = stripslashes($rw['titulo']);
+						$fecha = date('d/m/Y G:i',strtotime($rw['fecha']));
+
+						$foto = $rw['foto'];
+
+						$fotoThumb = $urlRecursos."uploads/$idparroquia/thb_".$foto;
+
+						$urlFoto = $urlRecursos."uploads/$idparroquia/big_".$foto;
+
+						$urlDescarga = $urlOri."descarga.php?file=".$urlFoto;
+						$urlPrint = $urlOri."print.php?tipo=imagen&file=".$urlFoto;
+						
+						if($conta%2==0) echo "<div class=\"row\">";
+
+						$conta++;
+
+			?>
+				<div class="col-md-6">
+					<div class="galTope">
+
+						<a href="<?=$urlFoto;?>" class="fancybox-thumb" rel="fancybox-thumb" title="<?=$tituloFoto;?>">
+							<img src="<?=$fotoThumb;?>" alt="<?=$tituloFoto;?>" />
+							<span class="titulo"><?=$tituloFoto;?></span>
+							<span class="ultfecha">Fecha de subida: <?=$fecha;?></span>
+						</a>
+
+					<?php if($especial == 0){ ?>
+						<div class="tolbot">
+							<a href="<?=$urlPrint;?>" target="_blank" title="Imprimir">
+								<img class="sinborder" src="<?=$urlOri;?>images/print.png" /> <span class="topp">Imprimir</span>
+							</a>
+							<a href="<?=$urlDescarga;?>" title="Descargar">
+								<img class="sinborder" src="<?=$urlOri;?>images/download.png" /> <span class="topp">Descargar</span>
+							</a>
+						</div>
+					<?php } ?>
+
+					</div>
+
+				</div>
+
+				<?php if($conta%2==0) echo "</div>"; ?>
+
+				<?php } ?>
+
+				<?php if($conta%2==1) echo "</div>"; ?>
+
+				<script type="text/javascript" language="javascript">
+
+				jQuery(document).ready(function() {
+					jQuery(".fancybox-thumb").fancybox({
+						prevEffect	: 'none',
+						nextEffect	: 'none',
+						helpers	: {
+							title	: {
+								type: 'inside'
+							},
+							thumbs	: {
+								width	: 50,
+								height	: 50
+							}
+						}
+					});
+				});
+
+				</script>
+
+				<p class="copyy" style="clear:both;"><b>Todos los derechos de imágenes quedan reservados al ser propiedad de la parroquia <?=getValue("SELECT titulo_logo FROM configuracion_base WHERE parroquia = $idparroquia",1);?></b></p>
+
+				<?php
+				}
+				else echo "<h2 style=\"text-align:center;font-weight:normal;margin:10px;\">La galería a la que intentas acceder no existe.</h2>";
+
+			?>
+
+<?php } ?>

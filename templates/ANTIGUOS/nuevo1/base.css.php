@@ -1,0 +1,501 @@
+<?php
+
+header("Content-type: text/css", true);
+
+if($_SERVER['HTTP_HOST'] == "www.purisimaconcepcionquart.es") $head = "header_top_quart_2.jpg"; else $head = "header_top.jpg";
+
+?>
+
+body, td, input, textarea, th, a{font-family:georgia, arial, verdana, sans-serif;font-size:12px;}
+body{background:url(images/bg_repeat.jpg) repeat #F3F4E7;margin:0;padding:0;}
+
+.linkBloque{font-family: "Tinos",arial,verdana,sans-serif;font-weight: bold;font-size: 21px;color: #283B56;padding:10px;display:block;text-align: center;}
+
+a{text-decoration:none;color:#39547A;}
+
+label{color:#838383;font-size:12px;font-family:georgia,arial,verdana,sans-serif;}
+
+#header #top-menu{background:url(images/bg_topmenu.jpg) repeat-x;height:44px;width:100%;}
+#top-menu ul{margin:0;padding:0;width:991px;margin:0 auto 0 auto;}
+
+#top-menu ul li{float:left;list-style-type:none;margin-right:20px;}
+#top-menu ul li a{color:#fff;text-decoration:none;padding-top:15px;height:55px;padding-left:13px;padding-right:13px;display:block;}
+#top-menu ul li a:hover{text-decoration:none;}
+
+#top-menu ul li a:hover{background:url(images/repeat_hover_topmenu.jpg) repeat-x;}
+
+#subheader{background:url(images/<?=$head;?>) no-repeat;width:815px;height:135px;margin:0 auto 0 auto;padding-left:180px;padding-top:60px;}
+#subheader a{font-family:'Tinos',georgia,arial,verdana,sans-serif;color:#39547A;font-size:33px;text-decoration:none;}
+#subheader .subtitle{font-family:'Tinos',georgia,arial,verdana,sans-serif;color:#535831;font-size:21px;}
+
+/* SIDEBAR */
+
+.left, .right{float:left;width:216px;}
+
+#contenido{background:url(images/bg_contenido.jpg) repeat;width:995px;margin:0 auto 0 auto;}
+.parroquia-9 .sf-menu li a{font-size:16px;}
+.parroquia-9 .sf-menu li ul li a{font-size:14px;}
+/* LEFT */
+
+.left .bloque{background:url(images/bg_izquierda.png) no-repeat;width:216px;margin-bottom:20px;margin-left:5px;margin-top:3px;}
+.left .titulo{font-family:'Tinos',arial,verdana,sans-serif;font-weight:bold;font-size:21px;color:#4F5722;padding-top:50px;text-align:center;}
+
+.left .icono{font-family:'Tinos',arial,verdana,sans-serif;font-weight:bold;font-size:21px;color:#4F5722;padding-top:50px;margin-left:20px;}
+.left .content-bloque{padding:10px;}
+.left .bloqueshome p{background:url(images/bg_ul_izquierda.png) no-repeat;color:#73541A;font-weight:normal;font-size:12px;padding-left:30px;min-height:37px;padding-top:4px;}
+.left .bloqueshome b{font-weight:normal;}
+.left .bloqueshome ul li{list-style-type:none;font-weight:bold;color:#2C2E1D;}
+
+.left .calendario_eventos {background:url(images/icons/icon_eventos.png) 0px 48px no-repeat;padding-left:35px;}
+.left .ultimas_noticias {background:url(images/icons/icon_noticias.png) 0px 48px no-repeat;padding-left:35px;}
+.left .enlaces_amigos {background:url(images/icons/icono_enlaces.png) 0px 48px no-repeat;padding-left:35px;}
+
+.misa{text-align:center;margin-top:15px;}
+
+.left .listado{margin:0;padding:0;margin-left:8px;margin-top:10px;}
+.left .listado li{margin:0;padding:0;background:url(images/icons/icono_listado.png) 4px 2px no-repeat;padding-left:20px;margin-bottom:9px;list-style-type:none;}
+.left .listado a{color:#4F5722;text-decoration:none;}
+.left .listado a:hover{text-decoration:underline;}
+
+/* RIGHT */
+
+.right .bloque{background:url(images/bg_derecha.png) no-repeat;width:216px;margin-bottom:20px;margin-left:5px;margin-top:3px;}
+.right .titulo{font-family:'Tinos',arial,verdana,sans-serif;font-weight:bold;font-size:21px;color:#283B56;padding-top:50px;text-align:center;}
+
+.right .icono{font-family:'Tinos',arial,verdana,sans-serif;font-weight:bold;font-size:21px;color:#283B56;padding-top:50px;margin-left:20px;}
+.right .content-bloque{padding:10px;}
+.right .bloqueshome p{background:url(images/bg_ul_derecha.png) no-repeat;color:#283B56;font-weight:normal;font-size:12px;padding-left:30px;min-height:37px;padding-top:4px;}
+.right .bloqueshome b{font-weight:normal;}
+.right .bloqueshome ul li{list-style-type:none;font-weight:bold;color:#2C2E1D;}
+
+.right .ultimos_documentos {background:url(images/icons/icon_documentos.png) 0px 48px no-repeat;padding-left:35px;}
+.right .galeria {background:url(images/icons/icon_galeria.png) 0px 48px no-repeat;padding-left:35px;}
+.right .proximos_eventos{background:url(images/icons/icon_prox_eventos.png) 0px 48px no-repeat;padding-left:30px;}
+
+.misa{text-align:center;margin-top:15px;}
+
+.right .listado{margin:0;padding:0;margin-left:8px;margin-top:10px;}
+.right .listado li{margin:0;padding:0;background:url(images/icons/icono_listado.png) 4px 2px no-repeat;padding-left:20px;margin-bottom:9px;list-style-type:none;}
+.right .listado a{color:#12315C;text-decoration:none;}
+.right .listado a:hover{text-decoration:underline;}
+
+
+/* CONTENIDO CENTRAL */
+
+.verresto, .vereventos a{background:url(images/resto_calendario.jpg) no-repeat;width:171px;height:24px;clear:both;margin:0 auto 0 auto;display:block;text-align:center;font-family:georgia, arial, verdana, sans-serif;color:#39547A;text-decoration:none;margin-top:20px;}
+.verresto:hover{text-decoration:none;}
+
+.vereventos a:hover{text-decoration:underline;}
+
+#contenido-central{width:540px;float:left;}
+
+#contenido-central .noticia{margin-left:10px;margin-top:10px;}
+#contenido-central .noticia .bajonoticia{clear:both;background:url(images/bajo_noticia.png) no-repeat;width:488px;height:20px;margin:0 auto 0 auto;}
+#contenido-central .noticia .fecha{color:#39547A;text-align:center;width:64px;font-size:16px;float:left;margin-left:10px;font-family:georgia,arial,verdana,sans-serif;}
+#contenido-central .noticia .titular-noticia a, #contenido-central .noticia .titular-noticia span, h2{padding-top:10px;margin-left:10px;text-decoration:none;font-family:'Tinos',arial,verdana,sans-serif;font-size:23px;color:#282828;width:446px;float:left;}
+#contenido-central .noticia .titular-noticia a:hover{text-decoration:underline;}
+
+#contenido-central .noticia .titular-noticia span{margin-bottom:10px;margin-left:30px;}
+
+.text-noticia{color:#232323;line-height:26px;font-size:14px;padding:15px;padding-top:5px;text-align:justify;}
+
+#contenido-central .leermas, .more{padding-top:2px;font-weight:bold;background:url(images/btn_noticia.png) no-repeat;width:150px;height:34px;display:block;text-align:center;color:#fff;text-decoration:none;
+
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+
+}
+
+.moregal{padding-top:10px;margin-left:30px;}
+
+.fotoGaleria{margin-top:10px;}
+.fotoGaleria img{border:solid 1px #3C7AB0;padding:1px;}
+
+#contenido-central .leermas:hover, .more:hover{text-decoration:underline;	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity:1;
+	-khtml-opacity: 1;
+	opacity: 1;}
+	
+#contenido-central .leermas, #contenido-central .categoria{float:left;}
+#contenido-central .categoria{color:#4F95EC;font-size:12px;font-weight:bold;float:right;text-decoration:none;}
+
+#contenido-central .categoria a{color:#4F95EC;font-size:12px;font-weight:bold;text-decoration:none;}
+
+#contenido-central .separanoticia{background:url(images/separa_noticia.png) no-repeat;width:506px;height:10px;margin:0 auto 0 auto;margin-top:20px;}
+
+/* FOOTER */
+
+#footer{background:url(images/bg_footer.jpg) no-repeat;width:594px;height:67px;margin:0 auto 0 auto;padding-left:400px;padding-top:50px;}
+#footer span{font-family:'Tinos',arial,verdana,sans-serif;font-size:23px;color:#39547A;}
+
+/* CALENDARIO */
+
+
+.calendar {
+	width: 187px;
+	padding: 0;
+	margin: 0;
+	font: normal 12px/20px;
+	color: #616B76;
+	text-align: center;
+	background-color: #fff;
+	margin:0 auto 0 auto;
+	border-left:solid 1px #D2D6BB;
+	margin-top:10px;
+}
+
+.calendar .nav, .calendar .nav a {
+	font: bold 18px;
+	color: #fff;	
+	text-align: center;
+	text-decoration: none;
+}	
+
+
+.calendar caption {
+	margin: 0;
+	padding: 0;
+	width: 187px;
+	background: url(images/bg_top_calendar.jpg) repeat-x #D84E12;
+	color: #fff;	 
+	font: bold 18px;
+	text-align: center;
+	padding:5px;
+	border:none;
+}
+
+.calendar .calendar-month{font-size:14px;font-weight:bold;width:177px;}
+
+.calendar th {
+	font-weight:bold;
+	font-size:11px;
+	color: #39547A;
+	background: url(images/bg_th_calendar.jpg) no-repeat #fff;
+	border:solid 1px #A5BCDB;
+	padding:1px;
+	text-align:center;
+}
+
+.calendar td{padding:4px;width:28px;height:28px;}
+
+.calendar a, .calendar .today, .calendar td.today a, .calendar td.today a:link, .calendar td.today a:visited {
+	color: #fff;
+	font-weight: bold;
+	background: #B1BE69;
+	padding:0;
+	margin:0;
+}
+
+.calendar td a:hover{background:#7A8539;}
+
+.calendar td {
+	border-right: 1px solid #D6D9C3;
+	border-bottom: 1px solid #D6D9C3;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	font-size:12px;
+	color:#6E5628;
+	background: url(images/bg_td_calendar.jpg) repeat-x right bottom;
+}
+
+.calendar td a {
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	padding-top:0px;
+	font-size:11px;
+	width:18px;
+	height:18px;
+}
+
+.popular{margin-top:10px;border:solid 1px #A9B471;padding:1px;}
+
+.ultimas_noticias_diocesis i{font-size:14px;padding:0;}
+
+.evento-proximo{font-family:georgia,arial,verdana,sans-serif;width:179px;margin:0 auto 0 auto;padding-right:7px;}
+.evento-proximo .tituloEvento{color:#4F95EC;font-size:12px;font-family:georgia, arial, verdana, sans-serif;padding:0;margin-bottom:6px;}
+.evento-proximo .dia{color:#fff;}
+.evento-proximo .lugar{color:#fff;}
+.evento-proximo .hora{color:#fff;}
+
+.evento-proximo div{line-height:22px;text-align:center;}
+
+.content-eventos{background:url(images/middle_evento.jpg) repeat-y;padding:4px;margin-left:10px;}
+.top-eventos{background:url(images/top_evento.jpg) no-repeat;width:179px;height:10px;margin-left:10px;margin-top:10px;}
+.bottom-eventos{background:url(images/bottom_evento.jpg) no-repeat;width:179px;height:15px;margin-left:10px;}
+
+.evento-proximo{margin:0;padding:0;height:100px;}
+
+#misas{width:526px;z-index:10000;height:340px;background:url(images/bg_misas.png) no-repeat;position:absolute;}
+.panel{z-index:-10000;float:right;}
+
+#featt{width:991px;margin:0 auto 0 auto;margin-bottom:10px;position:relative;top:-10px;}
+
+#misas .titlemisas{color:#131313;font-family:'Tinos',georgia,arial,verdana,sans-serif;font-size:21px;margin-left:50px;margin-top:20px;margin-bottom:15px;}
+#misas b, #misas strong{color:#6E5628;font-size:11px;font-weight:normal;margin-left:60px;}
+#misas ul li{color:#1D1E16;font-size:11px;list-style-type:none;margin-left:50px;margin-bottom:3px;margin-top:3px;}
+
+
+/* PAGINA DOCUMENTOS */
+
+.folder{font-size:12px;margin-bottom:10px;border-bottom:dashed 1px #ccc;padding-bottom:10px;}
+.folder li a{color:#7E693D;font-weight:bold;background:url(images/minipdf.png) no-repeat;padding-left:20px;}
+.folder li{margin-left:30px;list-style-type:none;margin-bottom:13px;margin-top:13px;}
+.folder span.catego{font-weight:bold;background:url(images/folder.png) no-repeat;padding-left:23px;font-size:14px;margin-top:10px;}
+.folder span.desc{display:block;font-size:11px;line-height:22px;margin-top:10px;}
+
+/* REVISTA PARROQUIAL */
+
+.descarga{margin-left:10px;border-top:dashed 1px #ccc;padding-top:15px;padding-left:0;width:380px;}
+.descarga li{list-style-type:none;margin-bottom:10px;border-bottom:dotted 1px #999;width:380px;}
+.descarga li a{background:url(images/doc_pdf.png) no-repeat;padding-left:40px;font-size:18px;height:32px;display:block;padding-top:4px;}
+.descarga li span{display:block;color:#555;}
+
+/* GRUPOS PARROQUIALES */
+
+.grupos {}
+.grupos li{list-style-type:none;background:url(images/arrow_right.png) 0px 7px no-repeat;padding-left:20px;margin-bottom:5px;}
+.grupos li a{text-decoration:none;color:#333;}
+.grupos li a:hover{font-weight:bold;}
+
+
+/* buttonNew 
+---------------------------------------------- */
+
+.bigroundedNew {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.mediumNew {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.smallNew {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+
+
+.buttonNew {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 12px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .7em; 
+	-moz-border-radius: .7em;
+	border-radius: .7em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	margin-top:10px;
+}
+.buttonNew:hover {
+	text-decoration: none;
+}
+.buttonNew:active {
+	position: relative;
+	top: 1px;
+}
+
+/* blue */
+.blueNew {
+	color: #fff;
+	border: solid 1px #A8D367;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#BFDE90), to(#76AA27));
+	background: -moz-linear-gradient(top,  #BFDE90,  #76AA27);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFDE90', endColorstr='#76AA27');
+}
+.blueNew:hover {
+	background: #BFDE90;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9EC761), to(#73A823));
+	background: -moz-linear-gradient(top,  #9EC761,  #73A823);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9EC761', endColorstr='#73A823');
+}
+.blueNew:active {
+	color: #f4f4f4;
+	background: -webkit-gradient(linear, left top, left bottom, from(#76AA27), to(#BFDE90));
+	background: -moz-linear-gradient(top,  #76AA27,  #BFDE90);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#76AA27', endColorstr='#BFDE90');
+}
+
+/* red */
+.redNew {
+	color: #fff;
+	border: solid 1px #980c10;
+	background: #d81b21;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
+	background: -moz-linear-gradient(top,  #ed1c24,  #aa1317);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.redNew:hover {
+	background: #b61318;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+	background: -moz-linear-gradient(top,  #c9151b,  #a11115);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');
+}
+.redNew:active {
+	color: #de898c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+	background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
+}
+
+/* gray */
+.grayNew {
+	color: #e9e9e9;
+	border: solid 1px #555;
+	background: #6e6e6e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#575757));
+	background: -moz-linear-gradient(top,  #888,  #575757);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#575757');
+}
+.grayNew:hover {
+	background: #616161;
+	background: -webkit-gradient(linear, left top, left bottom, from(#757575), to(#4b4b4b));
+	background: -moz-linear-gradient(top,  #757575,  #4b4b4b);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#757575', endColorstr='#4b4b4b');
+}
+.grayNew:active {
+	color: #afafaf;
+	background: -webkit-gradient(linear, left top, left bottom, from(#575757), to(#888));
+	background: -moz-linear-gradient(top,  #575757,  #888);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#888888');
+}
+
+
+/* white */
+.whiteNew {
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.whiteNew:hover {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.whiteNew:active {
+	color: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+	background: -moz-linear-gradient(top,  #ededed,  #fff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+.evento{border-bottom:dotted 1px #ccc;margin-bottom:10px;padding-top:10px;}
+.evento div{margin-bottom:5px;line-height:24px;}
+
+.bloqueLiturgia{margin-left:10px;}
+
+.bloqueLiturgia .topBloque{background:url(images/top_bloque_liturgia.png) no-repeat;width:240px;height:32px;color:#fff;font-size:18px;padding-left:10px;padding-top:8px;}
+.bloqueLiturgia .content{min-height:257px;padding:7px;width:234px;border-left:solid 1px #39547A;border-right:solid 1px #39547A;border-bottom:solid 1px #39547A;color:#333;text-align:justify;line-height:22px;font-size:11px;}
+.bloqueLiturgia{width:250px;float:left;margin-bottom:15px;}
+
+.bloqueLiturgia .content b{font-size:14px;}
+
+.bloqueLiturgia .content a{display:block;margin-bottom:10px;}
+.bloqueLiturgia .completo{font-size:13px;color:#39547A;}
+.bloqueLiturgia .more{color:#fff;}
+.bloqueLiturgia .content b{display:block;margin-bottom:10px;}
+
+.completo{padding-top:6px;}
+
+#litu #eventos-dia{margin-left:15px;}
+
+
+/* GALERIA FOTOGRÁFICA */
+
+.fotoGaleria{text-align:center;}
+.fotoGaleria img{padding:1px;border:solid 1px #333;}
+.fotoGaleria a{display:block;}
+.fotoGaleria .tituloImagen{font-size:13px;display:block;margin:5px;font-weight:bold;}
+.fotoGaleria .fechaImagen{text-align:center;display:block;color:#3c3c3c;}
+
+.moregal{margin-left:30px;}
+.linksgal{clear:both;}
+
+.gal{width:200px;float:left;margin-right:10px;margin-left:10px;padding:15px;background:#F6F3EC;margin-bottom:20px;}
+.gal img{padding:1px;border:solid 1px #333;}
+.gal .titulo{display:block;font-size:13px;padding:5px;font-weight:bold;}
+.gal .ultfecha{font-size:10px;padding:3px;color:#515151;}
+.gal:hover{background:#EBE3D3;text-decoration:none;}
+.gal a:hover{text-decoration:none;}
+
+.galTope{float:left;margin-right:5px;margin-left:5px;padding:5px;background:#F6F3EC;margin-bottom:20px;margin-top:20px;text-align:center;width:220px;}
+.galTope img{padding:1px;border:solid 1px #333;}
+.galTope .titulo{display:block;font-size:12px;padding:5px;font-weight:bold;width:200px;}
+.galTope .ultfecha{font-size:10px;padding:5px;color:#515151;}
+.galTope:hover{background:#EBE3D3;text-decoration:none;}
+
+.galTope .sinborder{border:none;}
+.galTope a:hover{text-decoration:none;}
+.sinborder{border:none;}
+.tolbot{display:block;margin-top:5px;border-top:dotted 1px #c3c3c3;padding-top:3px;}
+.tolbot a{margin-right:3px;margin-left:3px;font-size:11px;}
+.galTope .topp{position:relative;top:-4px;}
+
+.mapaa{background:#fff;padding:0;margin:0;width:420px;padding-left:10px;padding-right:10px;padding-top:5px;padding-bottom:5px;margin:0 auto 0 auto;margin-bottom:10px;margin-top:20px;border:dotted 1px #ACBBCD;}
+
+#directions-panel {
+	display:none;
+	height: 100%;
+	float: right;
+	width: 460px;
+	padding:10px;
+	overflow: auto;
+	background:#fff;
+	position:relative;
+	left:-20px;
+	color:#000;
+	border:solid 1px #ccc;
+}
+
+#map-canvas {
+	margin-right: 400px;
+}
+
+#control {
+	background: #fff;
+	padding: 7px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+	display: none;
+	margin-top:30px;
+	height:31px;
+	width:470px;
+	margin:0 auto 0 auto;
+}
+
+#control input{border:solid 1px #ccc;font-size:16px;padding:3px;padding-top:5px;}
+
+.input{background:url(images/bg_input.jpg) no-repeat;width:228px;height:40px;border:none;font-size:22px;padding-left:5px;}
+#donativosForm textarea, #contactoForm textarea{padding:10px;background:url(images/bg_textarea.jpg) no-repeat;width:465px;height:149px;border:none;}
+#caracter{font-size:26px;margin-top:13px;width:200px;}
+
+#linksbajo{text-align:center;}
+
+
+.comentario{color:#333;margin-left:17px;width:500px;margin-bottom:30px;}
+.comentario .escrito{background:url(images/1376403417_comments.png) no-repeat;padding-left:20px;}
+.comentario .comm{padding:5px;background:#f3f3f3;border:dotted 1px #ccc;margin-top:7px;line-height:22px;}
+#formComentario, h2{margin-left:20px;}
+#formComentario textarea{width:400px;height:100px;}

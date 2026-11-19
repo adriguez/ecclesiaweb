@@ -1,0 +1,1883 @@
+@charset utf-8;
+/*
+Theme Name: Theme Mintrared
+Theme URI: http://www.mintrared.com/
+Description: Theme realizado por Mintrared para Parroquia nuestra señora de Montserrat de Picanya
+Author: Mintrared
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+*/
+
+html,
+body {
+    height: 100%;
+    font-size:12px;
+    line-height:1.5em;
+}
+
+ul{list-style: outside none none;margin: 0px 0px 1.5em 0.5em;
+padding: 0px;}
+
+ul li{padding: 0px 0px 0.9em 16px;font-size:14px;background: transparent url("../images/bull.gif") no-repeat scroll 0px 9px;
+padding: 0px 0px 0.9em 16px;
+font-size: 14px;}
+
+
+.parroquia-599 ul li{padding: 0px 0px 0.9em 10px;}
+.parroquia-2300 #widget_revista_parroquial{margin-top:54px !important;}
+li ul{list-style-position: outside;
+padding: 0px;
+margin: 20px 0px 0px 4px;}
+
+p{font-weight: 300;
+margin: 0px 0px 1.5em;}
+
+a{text-decoration: none;
+border: 0px none;
+color: #B33A0A;
+line-height:24px;}
+
+.parroquia-697 a{color:#0F3D6E;}
+
+	h2 a:hover {
+		text-decoration:none;
+		color:#f09628;
+		}
+/* General
+---------------------------------------- */
+body{
+	background:url(../images/main-bg.jpg) no-repeat 50% fixed #983700;
+	color: #725d55;
+	font-size:100%;
+	font-family:Verdana, Geneva, sans-serif;
+	line-height:1.5em;
+	position:relative;
+}
+
+.parroquia-697{
+	background:url(../images/bg_pabloii.png)  no-repeat 50% fixed #0089DF;
+}
+
+/* Header
+---------------------------------------- */
+
+.menuSuperior{
+
+	padding-top:7px;
+
+}
+.menuSuperior li{background:none;}
+
+.menuSuperior li a{
+	padding: 6px 9px 9px;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #F8E4C0;
+}
+.menuSuperior li a:hover{
+	border: 1px solid #E94F1B;
+	padding: 5px 8px 8px;
+	border-radius: 5px;
+	background: #B93306 url("../images/nav-bg.gif") repeat-x scroll 0px 0px;
+	color: #FFF;
+}
+
+.parroquia-697 .menuSuperior li a:hover{background:#288EFF;border:solid 1px #507B7C;}
+
+header {
+	height:261px;
+	position:relative;
+	z-index:2;
+	background:url(../images/menu-bg.png) no-repeat 50% 0;
+}
+
+/* Logo */
+.logoFondo {
+	height:150px;
+	background:url(../images/rep-bg.png) repeat-x 0 0;
+	margin:31px 0 30px 0;
+	overflow:hidden;
+	width:100%;-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	}
+.parroquia-697 .logoFondo{background:url(../images/rep-bg-pablo.png) repeat-x 0 0;}
+	.logoFondo h1,
+	.logoFondo h2 {
+		font-size:36px;
+		line-height:46px;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		letter-spacing:19px;
+		padding:0;
+		font-weight:bold;
+		text-shadow:0 2px 3px rgba(0, 0, 0, .8);
+		}
+		.logoFondo h1 a,
+		.logoFondo h2 a {
+			color:#fcf9f3;
+			text-decoration:none;
+			float:left;
+			}
+
+.logoFondo .jes{position:relative;left:-14px;margin-right:10px;}
+
+.parroquia-697 .jes{margin-left:50px;margin-top:5px;}
+
+/* Header widget */
+.widget-header {
+	float:right;
+	padding:11px 0 0 0;
+}
+
+/* Request a quote */
+#widget_my_requestquotewidget {
+	width:100%;
+	overflow:hidden;
+	}
+	
+	.box {
+		border:1px solid #dbdbdb;
+		margin-bottom:20px;
+		overflow:hidden;
+		zoom:1;
+		}
+	.box .indent img, .box-alt img{width:100%;}
+	.box-button {
+		float:right;
+		background:#dbdbdb;
+		font-size:21px;
+		color:#fff;
+		text-decoration:none;
+		padding:10px;
+		}
+	.box-text {
+		float:left;
+		width:75%;
+		}
+	.button-outdent {
+		
+		}
+	.box .widget:last-child {
+		border-bottom:none;
+		margin-bottom:0;
+		}
+
+
+
+/* Slider
+---------------------------------------- */
+#slider {
+	height:400px;
+	margin-bottom:30px;
+	overflow:hidden;
+	position:relative;
+	background:url(../images/slider-bg.png) no-repeat 50% 0;
+	}
+	#faded {
+		padding:50px 77px 0 79px;
+		overflow:hidden;
+		margin:0 auto;
+		position:relative;
+	}
+		#faded .slide {
+			width:821px;
+			}
+		#faded .slide figure {
+			float:right;
+			border:1px solid #dd8613;
+			}
+			#faded .slide figure img {
+				float:left;
+				}
+		#faded .desc {
+			width:348px;
+			float:left;
+			font-size:14px;
+			color:#d3c1b2;
+			}
+			#faded .desc h2 {
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:36px;
+				line-height:1.2em;
+				letter-spacing:0;
+				color:#fff;
+				margin-bottom:.5em;
+				padding:22px 0 0 0;
+				}
+				#faded .desc h2 a {
+					color:#fff;
+					}
+				#faded .desc h2 a:hover {
+					text-shadow:0 0 5px #fff;
+					}
+			#faded .desc p {
+				margin:0;
+				}
+				#faded .desc p a {
+					color:#fff;
+					text-decoration:none;
+					}
+				#faded .desc p a:hover {
+					text-decoration:underline;
+					}
+	/*
+	 * Required: If fixed height, state it here
+	*/
+	#faded .rap { 
+		height:300px;
+		overflow:hidden;
+		position:relative;
+	}
+	
+	#faded .button {
+		position:absolute;
+		top:178px;
+		width:29px;
+		height:43px;
+		}
+		#faded .button.prev {
+			left:19px;
+			background:url(../images/prev-button.png) no-repeat 0 0;
+			}
+		#faded .button.next {
+			background:url(../images/next-button.png) no-repeat 0 0;
+			right:19px;
+			}
+
+
+
+/* Navigations
+---------------------------------------- */
+
+/* Primary navigation */
+nav.primary {
+	height:50px;
+}
+
+/* Essential styles for dropdown menu */
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+	width:990px;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			108px; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			109px; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+
+/* Our skin for dropdown menu */
+.sf-menu {
+	max-width:990px;
+	float:			left;
+	margin-top:8px;
+}
+.sf-menu a {
+	padding: 6px 9px 9px 9px;
+	text-decoration:none;
+	font-size:14px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:#f8e4c0;
+}
+.sf-menu li {
+	background:none;
+	margin-right:10px;
+}
+.sf-menu li li {
+	background:none;
+	margin:0 0 1px 0;
+}
+	.sf-menu li li a {
+		font-size:12px;
+		color:#f8e4c0;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		background:#7a1f00;
+		background:rgba(122, 31, 0, .77);
+		color:#f8e4c0;
+		}
+.sf-menu li li li {
+	background:none;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	outline:		0;
+}
+.sf-menu li.sfHover a, .sf-menu li:hover a, .sf-menu li.current-menu-item a {
+	border:1px solid #e94f1b;
+	padding: 5px 8px 8px 8px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background:url(../images/nav-bg.gif) 0 0 repeat-x #b93306;
+	color:#fff;
+	}
+
+.sf-menu li.sfHover li a, .sf-menu li li:hover a {
+	border:none;
+	padding: 10px 10px 11px 10px;
+	background:#7a1f00;
+	background:rgba(122, 31, 0, .77);
+	color:#f8e4c0;
+	}
+	.sf-menu li.sfHover li a:hover {
+		color:#fff;
+		}
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url(../images/arrows-ffffff.png) no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			.8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+/* apply hovers to modern browsers */
+.sf-menu ul a:focus > .sf-sub-indicator,
+.sf-menu ul a:hover > .sf-sub-indicator,
+.sf-menu ul a:active > .sf-sub-indicator,
+.sf-menu ul li:hover > a > .sf-sub-indicator,
+.sf-menu ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul {
+	background:	url(../images/shadow.png) no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}
+
+
+
+
+/* Content
+---------------------------------------- */
+
+	
+.contenido {
+	background:url(../images/content-tail.png);
+	border:1px solid #f8eebf;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	margin-bottom:15px;
+}
+
+.primary_content_wrap{float:left;width:478px;}
+
+	#content .indent {
+		padding:19px;
+		background:url(../images/content-top-tail.png) 0 0 repeat-x;
+		zoom:1;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		position:relative;
+		}
+
+	article h2{font-size:26px;}
+	article {
+		padding-bottom:19px;
+		border-bottom:1px solid #eee;
+		margin-bottom:21px;
+		overflow:hidden;
+		width:100%;
+	}
+	article .extra-data{font-size:12px;}
+	article .extra-data a{font-weight:normal;}
+	article .photo-article img{width:100%;height:100%;}
+	article.ministry {
+		border-bottom:none;
+		padding-bottom:0;
+		}
+	article.about_article {
+		float:left;
+		width:308px;
+		font-size:12px;
+		line-height:1.5em;
+		border:none;
+		padding-bottom:0;
+		margin-bottom:40px;
+		margin-right:20px;
+		}
+	article.about_article.no-margin {
+		margin-right:0;
+		}
+		article.about_article .featured-thumbnail img {
+			margin-bottom:0;
+			}
+		article.about_article p {
+			text-align:left;
+			margin-bottom:4px;
+			}
+		.featured-thumbnail {
+			float:left;
+		}
+			.featured-thumbnail img {
+				margin:5px 20px 10px 0;
+				border:1px solid #fff;
+				}
+		
+		.read-more {
+			margin:14px 0 0 0;
+			overflow:hidden;
+			}
+		.read-more.alt {
+			margin:0;
+			}
+			.read-more a {
+				float:right;
+				background:url(../images/button-tail.gif) 0 0 repeat-x #dd841e;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-style:italic;
+				text-transform:uppercase;
+				color:#fff;
+				line-height:30px;
+				padding:0 12px;
+				border-radius:5px;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				}
+			.parroquia-697 .read-more a{background:url(../images/button-tail-pablo.gif) 0 0 repeat-x;color:#fff;}
+		.post-content {
+			text-align:justify;
+			font-size:12px;
+			line-height:24px;
+			margin-top:5px;
+			font-weight:bold;
+		}
+			.pagination {
+				
+			}
+				.pagination a {
+					display:inline-block;
+					padding:0 5px;
+					background:#eee;
+					}
+	.post-meta {
+		background:url(../images/post-icon1.png) no-repeat 0 3px;
+		padding:0 0 10px 26px;
+		overflow:hidden;
+		zoom:1;
+	}
+	.post-meta .comment-count {
+		float:right;
+		}
+		.post-meta .comment-count a {
+			color:#7b663e;
+			float:right;
+			background:url(../images/comment-bg.png) no-repeat 0 0;
+			width:34px;
+			padding:0 0 0 31px;
+			height:38px;
+			line-height:31px;
+			text-align:center;
+			}
+		.post-meta .comment-count a:hover {
+			color:#db4f11;
+			}
+	.post-navigation {
+		
+	}
+	p.gravatar {
+		float:left;
+		margin-right:20px;
+		}
+	
+	
+	.alignleft {
+		float:left;
+		margin:0 20px 10px 0;
+		}
+	.alignright {
+		float:right;
+		margin:0 0 10px 20px;
+		}
+	.aligncenter {
+		text-align:center;
+		margin:0 auto;
+		}
+	article .post-content img {
+		max-width:710px;
+		}
+	
+	.link1 {
+		color:#db4f11;
+		text-decoration:underline;
+		}
+	.link1:hover {
+		text-decoration:none;
+		}
+
+.unique-post{margin-top:20px;}
+.unique-post h1{font-family:"Trebuchet MS";color:#000;font-size:30px;margin-bottom:10px;}
+
+.extra-data{background: #F0F0F0 none repeat scroll 0% 0%;
+border: 1px solid #E6E6E6;
+color: #878787;
+margin-bottom: 10px;padding:10px;color:#333;}
+
+/* Comments
+---------------------------------------- */
+#comments {
+	padding:30px 0 0 0;
+}
+#comments ol {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	}
+	li.comment {
+		overflow:hidden;
+		position:relative;
+		zoom:1;
+		padding:10px 10px 10px 60px;
+		margin-bottom:20px;
+		background:#f2e7b0;
+		border:1px solid #fff;
+	}
+		.odd {
+			
+		}
+		.even {
+			
+		}
+		.author-comment {
+			
+		}
+		.comment-text {
+			
+		}
+		.comment-meta {
+			font-size:11px;
+			color:#999;
+		}
+			li.comment p.gravatar {
+				float:none;
+				margin:0;
+				position:absolute;
+				left:10px;
+				top:10px;
+				padding:1px;
+				border:1px solid #dbdbdb;
+				vertical-align:top;
+				overflow:hidden;
+				}
+				li.comment p.gravatar img {
+					display:block;
+					vertical-align:top;
+					overflow:hidden;
+					}
+		.waiting-for-approval {
+			
+		}
+	#trackbacks {
+		
+	}
+		li.trackback {
+			
+		}
+	p#no-comments {
+		
+	}
+	#comments-form {
+		
+	}
+	
+	.allowed_tags {
+		background:#fff;
+		padding:15px;
+		font-size:11px;
+		font-family:"Courier New", Courier, monospace;
+		color:#666;
+		}
+		.allowed_tags strong {
+			font-family:Tahoma, Geneva, sans-serif;
+			}
+		#respond {
+			
+		}
+		.cancel-comment-reply {
+			
+		}
+
+
+
+/* Page
+---------------------------------------- */
+.page {
+	
+}
+	#page-content {
+		
+	}
+	#page-meta {
+		
+	}
+
+.author-meta {
+	margin-bottom:20px;
+	overflow:hidden;
+	width:100%;
+	}
+	.author-meta p.gravatar {
+		margin:0;
+		}
+
+
+/* Contact Page
+---------------------------------------- */
+
+.address {
+	font-size:12px;
+	line-height:1.5em;
+	margin-bottom:3em;
+	}
+	.address dt {
+		font-weight:normal;
+		margin-bottom:1em;
+		}
+	.address dd {
+		color:#b33a0a;
+		margin-bottom:0;
+		overflow:hidden;
+		}
+	.address dd span {
+		float:left;
+		width:94px;
+		}
+
+
+/* Post
+---------------------------------------- */
+	.postContent {
+		overflow:hidden;
+	}
+
+
+/* Older and newer navigation */
+nav.oldernewer {
+	width:100%;
+	overflow:hidden;
+}
+	.older {
+		float:left;
+	}
+	.newer {
+		float:right;
+	}
+	nav.oldernewer a {
+		display:inline-block;
+		color:#ab3500;
+		background:url(../images/button-nav-tail.gif) 0 100% repeat-x #fff8da;
+		line-height:34px;
+		border:1px solid #fffcf1;
+		padding:0 13px;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		position:relative;
+		}
+
+
+#author {
+	width:100%;
+	overflow:hidden;
+	padding-bottom:20px;
+}
+	#author .avatar {
+		float:left;
+		margin-right:20px;
+		}
+		#author .avatar img {
+			margin:0;
+			}
+
+
+
+
+
+/* Author
+---------------------------------------- */
+#post-author {
+	width:100%;
+	overflow:hidden;
+	}
+
+/* Recent author posts */
+#recent-author-posts {
+	
+}
+
+/* Recent author comments */
+#recent-author-comments {
+	
+}
+
+
+
+
+/* 404
+---------------------------------------- */
+#error404 {
+	
+}
+
+
+
+
+
+/* Sidebar
+---------------------------------------- */
+
+	.box {
+		background:url(../images/content-tail.png);
+		border:1px solid #f8eebf;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+	}
+	.box .indent {
+		background:url(../images/content-top-tail.png) 0 0 repeat-x;
+		zoom:1;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		padding:10px;
+		}
+
+.box-alt h2{font-size:20px;margin:0;color:#EC9D36;}
+.parroquia-697 .box-alt h2{color:#EEB011;text-transform: uppercase;}
+.parroquia-697 .box-alt a{color:#59AEE1;}
+
+	.box-alt {
+		background:url(../images/box-alt-bg.png);
+		padding:10px;
+		padding-bottom:10px;
+		margin-bottom:20px;
+		color:#fff;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:12px;
+		zoom:1;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		}
+
+		.parroquia-697 .box-alt{background:url(../images/box-alt-bg-pablo.png);}
+
+		.box-alt h3 {
+			display:none;
+			}
+		.box-alt ul {
+			margin-bottom:0;
+			}
+		.box-alt ul li {
+			background:none;
+			padding-left:0;
+			font-size:14px;
+			}
+			.box-alt ul li a {
+				color:#efdfb0;
+				}
+			.box-alt ul li img {
+				margin-right:5px;
+				}
+			.box-alt ul li a:hover {
+				text-decoration:none;
+				color:#db4f11;
+				}
+
+		
+		.widget {
+			margin-bottom:10px;
+			border-bottom:1px solid #fff;
+		}
+			.widget h3 {
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:18px;
+				line-height:1.2em;
+				font-weight:normal;
+				font-style:italic;
+				color:#83340d;
+				}
+			.parroquia-697 .widget h3{color:#0F3D6E;text-transform: uppercase;font-style: normal;}
+		ul.children {
+			margin:0 0 0 10px;
+			}
+
+/* Categories */
+#widget_categories h3, #widget_categorias h3 {
+	background:url(../images/title_icon1.png) no-repeat 0 2px;
+	padding:0 0 0 24px;
+	}
+
+/* Archive */
+#widget_archive h3 {
+	background:url(../images/title_icon2.png) no-repeat 0 2px;
+	padding:0 0 0 24px;
+	}
+
+#widget_liturgia h3 {
+	background:url(../images/title_icon2.png) no-repeat 0 2px;
+	padding:0 0 0 24px;
+	}
+
+#widget_misa_tv img{position:relative;left:-10px;}
+
+
+#widget_calendario_eventos h3 {
+	background:url(../images/1328886233_calendar-day.png) no-repeat 0 2px;
+	padding:0 0 0 20px;
+	}
+#widget_ultimos_documentos h3 {
+	background:url(../images/1328886296_New.png) no-repeat 0 2px;
+	padding:0 0 0 20px;
+	}
+
+#widget_galeria h3 {
+	background:url(../images/1328886387_057.png) no-repeat 0 2px;
+	padding:0 0 0 24px;
+	}
+
+
+#widget_liturgia ul li{background:none;}
+
+/* Recent comments */
+#widget_my_recent_comments h3 {
+	background:url(../images/title_icon3.png) no-repeat 0 2px;
+	padding:0 0 0 24px;
+	}
+	
+	#recentcomments li {
+		font-size:12px;
+		line-height:1.5em;
+		background:none;
+		padding:0 0 1.5em 0;
+		}
+		#recentcomments li a {
+			display:block;
+			color:#725d55;
+			text-decoration:none;
+			}
+			#recentcomments li a strong.author-name {
+				color:#db4f11;
+				}
+		#recentcomments li a:hover {
+			color:#db4f11;
+			text-decoration:none;
+			}
+
+
+/* Recent Readers */
+#widget_my_readers {
+	border-bottom:none;
+	margin-bottom:0;
+	padding-bottom:0;
+	}
+	
+	#widget_my_readers h3 {
+		background:url(../images/title_icon4.png) no-repeat 0 2px;
+		padding:0 0 0 24px;
+		}
+	.recently-user {
+		list-style-type:none;
+		margin-bottom:0;
+		}
+		.recently-user li {
+			padding:0 0 20px 0;
+			background:none;
+			overflow:hidden;
+			width:100%;
+			line-height:40px;
+			font-size:12px;
+			}
+			.recently-user li img {
+				float:left;
+				border:1px solid #f2dfd8;
+				margin-right:10px;
+				}
+			.recently-user li a {
+				color:#db4f11;
+				}
+
+
+
+/* Calendar */
+#calendar_wrap {
+	padding:0 10px 0 0px;
+	}
+	#wp-calendar {
+		width:100%;
+		}
+		#wp-calendar caption {
+			text-align:center;
+			}
+		#wp-calendar td {
+			text-align:center;
+			padding:6px 0;
+			border:none;
+			}
+		#wp-calendar caption {
+			font-size:16px;
+			color:#000;
+			font-weight:bold;
+			padding:4px 0;
+			margin-bottom:5px;
+			}
+		#wp-calendar thead th {
+			padding:7px 0;
+			font-size:14px;
+			background:#fff;
+			color:#000;
+			}
+		#wp-calendar #prev {
+			text-align:left;
+			}
+		#wp-calendar #next {
+			text-align:right;
+			}
+
+
+
+/* Text widget */
+.textwidget img {
+	border:none;
+	}
+
+
+
+
+
+
+
+/* Footer
+---------------------------------------- */
+#footer {
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+}
+	#footer .indent {
+		padding:10px 0 65px 0;
+		}
+		#footer a {
+			color:#fff !important;
+			text-decoration:none;
+			}
+		#footer a:hover {
+			text-decoration:underline;
+			}
+		#footer a.site-name {
+			text-transform:uppercase;
+			}
+
+
+
+/* Forms
+---------------------------------------- */
+
+/* Form defaults */
+input, select, textarea { 
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	vertical-align:middle;
+	font-weight:normal;
+}
+
+
+/* Contact form */
+.wpcf7-form {
+	width:590px;
+	}
+	.wpcf7-form p.field {
+		margin-bottom:0;
+		font-weight:bold;
+		color:#b33a0a;
+		}
+	.parroquia-697 .wpcf7-form p.field{color:#59AEE1;}
+	.wpcf7-form strong {
+		color:#b33a0a;
+		}
+	.parroquia-697 .wpcf7-form strong{color:#59AEE1;}
+	.wpcf7-form p.field input {
+		background:#f2e7b0;
+		padding:5px 0 5px 8px;
+		width:360px;
+		border:1px solid #fff;
+		margin-right:10px;
+		color:#222;
+		font-size:12px;
+		}
+		.wpcf7-form p.field small {
+			color:red;
+			}
+	.wpcf7-form textarea {
+		width:580px;
+		height:185px;
+		background:#f2e7b0;
+		font-size:1em;
+		padding:5px 0 5px 8px;
+		border:1px solid #fff;
+		overflow:auto;
+		color:#222;
+		font-size:12px;
+		}
+	.wpcf7-form input[type=submit] {
+		float:right;
+		background:url(../images/button-tail.gif) 0 0 repeat-x #dd841e;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-style:italic;
+		text-transform:uppercase;
+		color:#fff;
+		line-height:30px;
+		height:30px;
+		width:86px;
+		border:none;
+		padding:0 12px;
+		cursor:pointer;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		}
+	.parroquia-697 .wpcf7-form input[type=submit]{
+		background:url(../images/button-tail-pablo.gif) 0 0 repeat-x;
+		color:#fff;
+	}
+	.wpcf7-form input[type=submit]:hover {
+		text-decoration:underline;
+		}
+		.wpcf7-not-valid-tip {
+			width:220px !important;
+			position:absolute;
+			left:100% !important;
+			top:-10px !important;
+			padding:1px 0 1px 5px !important;
+			background:none !important;
+			color:red !important;
+			border:none !important;
+			}
+
+
+/* Comment form */
+#commentform {
+	
+	}
+	#commentform p.field {
+		margin-bottom:5px;
+		}
+		#commentform small {
+			color:#8b8b8b;
+			}
+	#commentform input[type=text] {
+		width:250px;
+		padding:4px;
+		border:1px solid #fff;
+		background:#f2e7b0;
+		}
+	#commentform textarea {
+		width:460px;
+		height:150px;
+		padding:4px;
+		overflow:auto;
+		border:1px solid #fff;
+		background:#f2e7b0;
+		}
+	#commentform #submit {
+		display:inline-block;
+		background:url(../images/button-tail.gif) 0 0 repeat-x #dd841e;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-style:italic;
+		text-transform:uppercase;
+		color:#fff;
+		line-height:30px;
+		height:30px;
+		width:126px;
+		border:none;
+		padding:0 12px;
+		cursor:pointer;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		}
+	.parroquia-697 #commentform #submit{
+		background:url(../images/button-tail-pablo.gif) 0 0 repeat-x;
+		color:#fff;
+	}
+	#commentform #submit:hover {
+		text-decoration:underline;
+		}
+
+
+/* Clear Floated Elements */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+
+.more {
+	float:left;
+	background:url(../images/button-tail.gif) 0 0 repeat-x #dd841e;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-style:italic;
+	text-transform:uppercase;
+	color:#fff;
+	line-height:30px;
+	padding:0 12px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	clear:both;
+	margin-top:10px;
+}
+
+.parroquia-697 .more{background:url(../images/button-tail-pablo.gif) 0 0 repeat-x;color:#fff;}
+
+/* GALERIA FOTOGRÁFICA */
+
+.fotoGaleria{text-align:center;}
+.fotoGaleria img{padding:1px;border:solid 1px #333;width:100%;}
+.fotoGaleria a{display:block;}
+.fotoGaleria .tituloImagen{font-size:13px;display:block;margin:5px;font-weight:bold;}
+.fotoGaleria .fechaImagen{text-align:center;display:block;color:#3c3c3c;}
+
+.moregal{margin-left:30px;}
+.linksgal{clear:both;}
+
+.gal{border:dotted 1px #B79C65;padding:10px;background:#F6F3EC;margin-bottom:20px;}
+.gal img{padding:1px;border:solid 1px #333;}
+.gal .titulo{display:block;font-size:13px;padding:5px;font-weight:bold;}
+.gal .ultfecha{font-size:12px;padding:3px;color:#515151;}
+.gal:hover{background:#EBE3D3;border:dotted 1px #B79C65;text-decoration:none;}
+.gal a:hover{text-decoration:none;}
+
+.galTope{margin-right:5px;margin-left:5px;padding:5px;background:#F6F3EC;margin-bottom:20px;margin-top:20px;text-align:center;}
+.galTope img{padding:1px;border:solid 1px #333;}
+.galTope .titulo{display:block;font-size:12px;padding:5px;font-weight:bold;}
+.galTope .ultfecha{font-size:12px;padding:5px;color:#515151;}
+.galTope:hover{background:#EBE3D3;text-decoration:none;}
+
+.galTope .sinborder{border:none;}
+.galTope a:hover{text-decoration:none;}
+.sinborder{border:none;}
+.tolbot{display:block;margin-top:5px;border-top:dotted 1px #c3c3c3;padding-top:3px;}
+.tolbot a{margin-right:3px;margin-left:3px;font-size:11px;}
+.galTope .topp{position:relative;top:-4px;}
+
+.mapaa{background:#F6F3EC;padding:0;margin:0;width:100%;padding-left:10px;padding-right:10px;padding-top:5px;padding-bottom:5px;margin:0 auto 0 auto;margin-bottom:10px;border:dotted 1px #AA945B;}
+
+#directions-panel {
+	display:none;
+	height: 100%;
+	float: right;
+	width: 100%;
+	padding:20px;
+	overflow: auto;
+	background:#fff;
+	position:relative;
+	left:-10px;
+	color:#000;
+}
+#directions-panel  img{border:none;}
+
+#map-canvas {
+	margin-right: 400px;
+}
+
+#control {
+	background: #fff;
+	padding: 7px;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+	display: none;
+	margin-top:10px;
+	height:45px;
+}
+
+
+.calendar {
+	width: 180px;
+	padding: 0;
+	margin: 0;
+	border-left: 1px solid #782B0A;
+	font: normal 12px/20px;
+	color: #616B76;
+	text-align: center;
+	background-color: #fff;
+	margin:0 auto 0 auto;
+}
+
+.calendar .nav, .calendar .nav a {
+	font: bold 18px;
+	color: #fff;	
+	text-align: center;
+	text-decoration: none;
+}	
+
+
+.calendar caption {
+	margin: 0;
+	padding: 0;
+	width: 180px;
+	background: url(images/bg_top_calendar.jpg) repeat-x #D84E12;
+	color: #fff;	 
+	font: bold 16px;
+	text-align: center;
+	padding:5px; border:solid 1px #782B0A;
+	border-bottom:none;
+}
+
+.parroquia-697 .calendar caption{background: url(images/bg_top_calendar-pablo.jpg) repeat-x #003C83;}
+
+.calendar .calendar-month{font-size:14px;font-weight:bold;}
+
+.calendar th {
+	font-weight:bold;
+	font-size:11px;
+	color: #fff;
+	background: #F49B75;
+	border-right: 1px solid #782B0A;
+	border-bottom: 1px solid #782B0A;
+	border-top: 1px solid #782B0A;
+	padding:1px;
+	text-align:center;
+}
+
+.parroquia-697 .calendar th{background:#52BBF4;border: solid 1px #005DC5}
+
+.calendar td{padding:1px;width:20px;height:20px;}
+
+.calendar a, .calendar .today, .calendar td.today a, .calendar td.today a:link, .calendar td.today a:visited {
+	color: #F6F4DA;
+	font-weight: bold;
+	background: #DF9496;
+	padding:0;
+	margin:0;
+
+	width:100%;
+}
+
+.parroquia-697 .calendar a{background:#52BBF4;}
+
+.calendar td a:hover{background:#D16568;}
+
+.parroquia-697 .calendar td a:hover{background-color: #005DC5;}
+
+.calendar td {
+	border-right: 1px solid #782B0A;
+	border-bottom: 1px solid #782B0A;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	font-size:11px;
+	background: url(images/bg_calendar.gif) no-repeat right bottom;
+}
+
+.calendar td a {
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	padding-top:0px;
+	font-size:11px;
+}
+
+
+
+.vereventos{margin-top:10px;background:url(../images/viewevents.png) no-repeat top center;padding-top:20px;}
+.vereventos a{font-size:13px;font-weight:bold;}
+
+.calendario{text-align:center;}
+.calendario img{padding:1px;border:solid 1px #333;}
+.calendario a{font-size:18px;}
+.calendario span{display:block;margin-top:3px;line-height:24px;}
+.calendario a:hover{font-weight:normal;}
+
+
+/* PAGINA DOCUMENTOS */
+
+.folder{font-size:12px;margin-bottom:10px;border-bottom:dashed 1px #ccc;padding-bottom:10px;}
+.folder li a{color:#7E693D;font-weight:bold;background:url(../images/minipdf.png) no-repeat;padding-left:20px;}
+.folder li{margin-left:30px;list-style-type:none;margin-bottom:3px;margin-top:3px;}
+.folder span.catego{font-weight:bold;background:url(../images/folder.png) no-repeat;padding-left:23px;font-size:14px;}
+.folder span.desc{display:block;font-size:11px;}
+
+/* REVISTA PARROQUIAL */
+
+.descarga{margin-left:10px;border-top:dashed 1px #ccc;padding-top:15px;padding-left:0;width:380px;}
+.descarga li{list-style-type:none;margin-bottom:10px;border-bottom:dotted 1px #999;width:380px;}
+.descarga li a{background:url(../images/doc_pdf.png) no-repeat;padding-left:40px;font-size:18px;height:32px;display:block;padding-top:4px;}
+.descarga li span{display:block;color:#555;}
+
+#post-content ul li{margin-left:20px;}
+#post-content b{font-size:14px;}
+
+.byline {
+	margin: -4px 0px 0px 0px;
+	padding: 4px 2px;
+	font-size: 11px;
+	color:#555;
+}
+
+.byline a {
+	color: #555;
+}
+
+article h1{margin:0;padding:0;}
+
+.liturgiahoy a{font-size:13px;font-weight:bold;}
+.liturgiahoy a:hover{color:#000;}
+
+
+/* CONTACTO */
+
+.contacto{}
+.contacto label{color:#333;font-weight:bold;}
+
+.contacto .input{background:url(../images/bg_input.gif) repeat-x;width:360px;height:21px;border:none;border-left:solid 1px #ccc;border-right:solid 1px #ccc;padding-left:4px;font-size:12px;}
+.contacto textarea{width:360px;border:solid 1px #ccc;height:110px;}
+
+.contacto span{color:#aa0000;}
+
+.contacto .mensaje{font-size:12px;font-weight:bold;}
+.contacto .exito{color:green;}
+
+/* DONATIVOS */
+
+.donativos{}
+.donativos label{color:#333;font-weight:bold;}
+
+.donativos .input{background:url(../images/bg_input.gif) repeat-x;height:21px;border:none;border-left:solid 1px #ccc;border-right:solid 1px #ccc;padding-left:4px;font-size:12px;}
+.donativos textarea{width:360px;border:solid 1px #ccc;height:110px;}
+
+.donativos .input{width:240px;}
+.donativos .midle{width:190px;}
+.donativos .peque{width:150px;}
+
+.donativos span{color:#aa0000;}
+
+.donativos .mensaje{font-size:12px;font-weight:bold;}
+.donativos .exito{color:green;}
+
+
+
+/* BOTONES */
+
+
+/* buttonNew 
+---------------------------------------------- */
+
+.bigroundedNew {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.mediumNew {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.smallNew {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+
+
+.buttonNew {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 12px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .7em; 
+	-moz-border-radius: .7em;
+	border-radius: .7em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	margin-top:10px;
+}
+.buttonNew:hover {
+	text-decoration: none;
+}
+.buttonNew:active {
+	position: relative;
+	top: 1px;
+}
+
+.pabloNew {
+	color: #fff !important;
+	border: solid 1px #333;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0892D8), to(#0071B1));
+	background: -moz-linear-gradient(top,  #0892D8,  #0071B1);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0892D8', endColorstr='#0071B1');
+}
+.pabloNew:hover {
+	background: #0892D8;
+	color:#fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0892D8), to(#0071B1));
+	background: -moz-linear-gradient(top,  #0892D8,  #0071B1);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0892D8', endColorstr='#0071B1');
+}
+.pabloNew:active {
+	color: #f4f4f4;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0071B1), to(#0892D8));
+	background: -moz-linear-gradient(top,  #0071B1,  #0892D8);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0071B1', endColorstr='#0892D8');
+}
+
+/* blue */
+.blueNew {
+	color: #fff;
+	border: solid 1px #A8D367;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#BFDE90), to(#76AA27));
+	background: -moz-linear-gradient(top,  #BFDE90,  #76AA27);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#BFDE90', endColorstr='#76AA27');
+}
+.blueNew:hover {
+	background: #BFDE90;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9EC761), to(#73A823));
+	background: -moz-linear-gradient(top,  #9EC761,  #73A823);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9EC761', endColorstr='#73A823');
+}
+.blueNew:active {
+	color: #f4f4f4;
+	background: -webkit-gradient(linear, left top, left bottom, from(#76AA27), to(#BFDE90));
+	background: -moz-linear-gradient(top,  #76AA27,  #BFDE90);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#76AA27', endColorstr='#BFDE90');
+}
+
+/* red */
+.redNew {
+	color: #fff;
+	border: solid 1px #980c10;
+	background: #d81b21;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
+	background: -moz-linear-gradient(top,  #ed1c24,  #aa1317);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.redNew:hover {
+	background: #b61318;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+	background: -moz-linear-gradient(top,  #c9151b,  #a11115);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');
+}
+.redNew:active {
+	color: #de898c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+	background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
+}
+
+/* gray */
+.grayNew {
+	color: #e9e9e9;
+	border: solid 1px #555;
+	background: #6e6e6e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#575757));
+	background: -moz-linear-gradient(top,  #888,  #575757);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#575757');
+}
+.grayNew:hover {
+	background: #616161;
+	background: -webkit-gradient(linear, left top, left bottom, from(#757575), to(#4b4b4b));
+	background: -moz-linear-gradient(top,  #757575,  #4b4b4b);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#757575', endColorstr='#4b4b4b');
+}
+.grayNew:active {
+	color: #afafaf;
+	background: -webkit-gradient(linear, left top, left bottom, from(#575757), to(#888));
+	background: -moz-linear-gradient(top,  #575757,  #888);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#888888');
+}
+
+
+/* white */
+.whiteNew {
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.whiteNew:hover {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.whiteNew:active {
+	color: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+	background: -moz-linear-gradient(top,  #ededed,  #fff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+.inner-text h1, .inner-text{
+color:#fff;
+}
+
+.bloqueLiturgia .topBloque{background:url(../images/rep_bloque_top.png) repeat-x;height:32px;color:#fff;font-size:18px;padding-left:10px;padding-top:8px;}
+.bloqueLiturgia .content{min-height:257px;padding:7px;border-left:solid 1px #F29935;border-right:solid 1px #F29935;border-bottom:solid 1px #F29935;color:#333;text-align:justify;line-height:22px;font-size:11px;}
+.bloqueLiturgia{margin-bottom:15px;}
+
+.bloqueLiturgia .content b{font-size:14px;}
+
+.bloqueLiturgia .content a{display:block;margin-bottom:10px;}
+.bloqueLiturgia .completo{font-size:13px;}
+.bloqueLiturgia .content b{display:block;margin-bottom:10px;}
+
+.evento{border-bottom:dotted 1px #ccc;margin-bottom:10px;}
+
+.bloque-1{width:330px;float:left;font-size:12px;background:#F7EDDD;padding:10px;margin-bottom:10px;	-webkit-border-radius: .7em; 
+	-moz-border-radius: .7em;
+	border-radius: .7em;}
+
+.bloque-2{width:250px;margin-left:13px;float:left;font-size:12px;background:#F7EDDD;padding:10px;margin-bottom:10px;	-webkit-border-radius: .7em; 
+	-moz-border-radius: .7em;
+	border-radius: .7em;}
+
+.bloque-1 li, .bloque-1 ul, .bloque-1 p, .bloque-2 p, .bloque-2 ul, .bloque-2 li{font-size:11px;}
+
+.bloque-1 p, .bloque-2 p{margin:0;padding:0;}
+.bloque-1 ul, .bloque-2 ul{margin-top:5px;margin-bottom:0px;}
+/* Always remember to compress your live stylesheet and keep an uncompressed backup */
+
+#events{background:#f3f3f3;-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;-webkit-box-shadow: 0px 0px 5px 0px rgba(219,216,219,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(219,216,219,1);
+box-shadow: 0px 0px 5px 0px rgba(219,216,219,1);min-height:160px;padding-bottom:20px;}
+
+.evento-proximo{display:none;padding:8px;}
+
+.evento-proximo .tituloEvento{font-weight:bold;color:#333;text-align:center;border-bottom:dotted 1px #fff;margin-top:6px;margin-bottom:6px;}
+.evento-proximo .dia{background:url(../images/calendar.png) 0px 3px no-repeat;padding-left:20px;}
+.evento-proximo .hora{background:url(../images/pushpin.png) 0px 3px no-repeat;padding-left:20px;}
+.evento-proximo .lugar{background:url(../images/lugar.png) 0px 3px no-repeat;padding-left:20px;}
+
+/*EJEMPLO2*/
+div.wp-pagenavi {
+	text-align:right;
+	padding:5px 10px;
+	overflow:hidden;
+}
+div.wp-pagenavi a, div.wp-pagenavi span.pages, div.wp-pagenavi span.current {
+	-webkit-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-moz-border-radius: 3px;
+	display:inline-block;
+}
+div.wp-pagenavi a, div.wp-pagenavi a:link, div.wp-pagenavi a:visited, div.wp-pagenavi a:active {
+	padding:4px 8px;
+	margin:0 2px;
+}
+div.wp-pagenavi a:hover {
+	background-color:#DD7E15;
+	color:#FFF;
+}
+div.wp-pagenavi span.pages {
+	line-height:normal;
+	padding:4px 8px;
+	font-weight:bold;
+	float:left;
+	color:#B45D0D;
+	background:#EEE;
+	border:1px solid #B45D0D;
+	margin:2px 0 0 0;
+}
+div.wp-pagenavi .page {
+	padding:4px 8px;
+}
+div.wp-pagenavi span.current {
+	padding: 4px 8px;
+	margin: 2px;
+	font-weight: bold;
+	background-color:#B45D0D;
+	color:#FFF;
+}
+div.wp-pagenavi span.extend {
+	padding: 2px 4px;
+	margin: 2px;
+	background:none;
+}
+
+.grupos li a:hover{font-weight:bold;}
+
+.error{font-weight:bold;font-size:14px;margin-bottom:4px;color:#aa0000;}
+
+.comentario{color:#333;}
+.comentario .escrito{background:url(../images/1376403417_comments.png) no-repeat;padding-left:20px;}
+.comentario .comm{padding:5px;background:#f3f3f3;border:dotted 1px #ccc;margin-top:7px;line-height:22px;}
+
+.boxtitle5{text-align:center;}
+
+.preoraciones{border:dotted 1px #E3D26F;padding:10px;background:#EADD93;text-align:justify;color:#000;padding-bottom:0px;margin-bottom:10px;}
+
+/* SLIDER */
+
+
+#myCarousel{margin-top:15px;margin-bottom:15px;}
+#myCarousel .carousel,#myCarousel  .item {
+
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;    height: 360px;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.navbar-mintra{color:#fff;width:100%;	background:url(../images/menu-bg.png) no-repeat 50% 0;}
+.parroquia-697 .navbar-mintra {background: url(../images/menu-bg-pablo.png) no-repeat 50% 0;}
+.navbar-mintra .navbar-brand{}
+.navbar-mintra .navbar-brand:hover,.navbar-mintra .navbar-brand:focus{color:#5e5e5e;background-color:transparent}
+.navbar-mintra .navbar-text{color:#fff}
+.navbar-mintra .navbar-nav>li>a{color:#F8E4C0}
+.parroquia-697 .navbar-mintra .navbar-nav>li>a{color:#fff;}
+.navbar-mintra .navbar-nav>li>a:hover,.navbar-mintra .navbar-nav>li>a:focus{color:#fff;background-color:transparent}
+.navbar-mintra .navbar-toggle{border-color:#fff}.navbar-mintra .navbar-toggle:hover,.navbar-mintra .navbar-toggle:focus{background-color:#333}
+.navbar-mintra .navbar-toggle .icon-bar{background-color:#fff}
+.navbar-mintra .navbar-collapse,.navbar-mintra .navbar-form{border-color:#e7e7e7;}
+.navbar-mintra .navbar-nav>.open>a,.navbar-mintra .navbar-nav>.open>a:hover,.navbar-mintra .navbar-nav>.open>a:focus{background-color:#a83100;color:#fff}
+.parroquia-697 .navbar-mintra .navbar-nav>.open>a, .parroquia-697 .navbar-mintra .navbar-nav>.open>a:hover,.parroquia-697 .navbar-mintra .navbar-nav>.open>a:focus{
+	background-color: #005DC5;
+}
+
+@media (max-width:767px){.navbar-mintra .navbar-nav .open .dropdown-menu>li>a{color:#fff}
+	.navbar-mintra .navbar-nav .open .dropdown-menu>li>a:hover,.navbar-mintra .navbar-nav .open .dropdown-menu>li>a:focus{color:#fff;background-color:transparent}
+	.navbar-mintra .navbar-collapse,.navbar-mintra .navbar-form{background:#a83100;}
+	.navbar-mintra .navbar-nav .open .dropdown-menu>.active>a,.navbar-mintra .navbar-nav .open .dropdown-menu>.active>a:hover,.navbar-mintra .navbar-nav .open .dropdown-menu>.active>a:focus{color:#fff;background-color:#A83100}
+	.navbar-mintra .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-mintra .navbar-nav .open .dropdown-menu>.disabled>a:hover,.navbar-mintra .navbar-nav .open .dropdown-menu>.disabled>a:focus{color:#A83100;background-color:transparent}
+}
+
+.navbar-mintra .navbar-link{color:#fff}
+.navbar-mintra .navbar-link:hover{color:#333}
+.navbar-mintra .btn-link{color:#777}
+.navbar-mintra .btn-link:hover,.navbar-mintra .btn-link:focus{color:#333}
+.navbar-mintra .btn-link[disabled]:hover,fieldset[disabled] .navbar-mintra .btn-link:hover,.navbar-mintra .btn-link[disabled]:focus,fieldset[disabled] .navbar-mintra .btn-link:focus{color:#a83100}
+
+.dropdown-menu{background: rgba(122, 31, 0, 0.77) none repeat scroll 0% 0%}
+.dropdown-menu a{margin-right:15px;}
+
+.parroquia-697 .dropdown-menu{background: rgba(7, 93, 147, 0.77) none repeat scroll 0% 0%}
+
+@media (max-width:320px) {	
+	.logoFondo h1,
+	.logoFondo h2 {font-size:20px; }
+}
+@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px) and (max-width:770px) { .menuSuperior li a{font-size: 10px !important;} .menuSuperior li{padding:2px;} /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) and (max-width:1199px) { .menuSuperior li a{font-size: 12px !important;} /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 989px) and (max-width: 1199px) { .col-pull-fix{right: 66.6667%;} }
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {  }
+ 
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {  }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .col-xsl-6{ width: 50%;float:left; }
+}
+
+.misas table td{border:solid 1px #333;}
+
+/* REDES SOCIALES */
+
+.redes{clear: both;margin: 0;padding:0;}
+.redes li{list-style-type: none;float:left;background: none}
+.redes li a{width:32px;height:32px;display: block;margin-right:10px;}
+.redes .facebook{background: url(../images/facebook_icon.png) no-repeat;}
+.redes .twitter{background: url(../images/twitter_icon.png) no-repeat;}
+.redes .gplus{background: url(../images/gplus_icon.png) no-repeat;}
+.redes .linkedin{background: url(../images/linkedin_icon.png) no-repeat;}
+
+/* PATROCINADORES */
+.cause-img img {
+  border-radius: 80%;   
+  border: solid 2px #E9E9E9;
+  margin: 0 auto;
+}
+.causes-content {
+  text-align: center;
+}
+.causes-heading {
+  font-weight: 700;
+  padding-top: 28px;
+  padding-bottom: 19px;
+}
+
+.parroquia-599 #widget_galeria .moregal{margin-top:85px;}
+
+.parroquia-697 .logoFondo{text-align: center;}
+.parroquia-697 .logoFondo h3{color:#EEB011;}
+.parroquia-697 .menuSuperior li a{color:#fff;}
+
+@font-face {
+    font-family: 'Quixote';
+    src: url('Quixote-Regular.eot');
+    src: local('Quixote Regular'), local('Quixote-Regular'),
+        url('Quixote-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Quixote-Regular.woff2') format('woff2'),
+        url('Quixote-Regular.woff') format('woff'),
+        url('Quixote-Regular.ttf') format('truetype'),
+        url('Quixote-Regular.svg#Quixote-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.parroquia-697 .logoFondo h1 a{    font-size: 55px;
+    margin-top: 26px;
+    margin-left: 59px;font-family:'Quixote', verdana,arial,sans-serif;font-weight: normal;font-style: normal;text-shadow:none;letter-spacing: normal;}
+
+	.parroquia-697 .logoFondo .subdiocesis{color:#EEB011;font-size:24px;position: relative;
+		top: 33px;
+		letter-spacing: 13px;}
+
+.parroquia-697 a:hover{color:#003C83}

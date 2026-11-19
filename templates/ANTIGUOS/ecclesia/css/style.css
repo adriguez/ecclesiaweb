@@ -1,0 +1,61 @@
+/*
+Theme Name: Ecclesia - Demo
+Template: ecclesia
+Theme URI: http://studiomw.co.uk/
+Description: WordPress Theme for Church Websites. Designed by <a href="http://studiomw.co.uk/">StudioMW</a>.
+Version: 1.0
+Author: Michał Wilkosinski
+Author URI: http://studiomw.co.uk/
+*/
+
+/* MW Demo Bar */
+html { margin-top: 36px; }
+#mw-demo-bar {
+    background: #202020; border-bottom: 1px solid #000; color: #ddd; font: 12px/16px Arial,Helvetica,sans-serif;
+    position: fixed; left: 0; top: 0; height: 36px; min-width: 988px; width: 100%; z-index: 99999;
+}
+#mw-demo-bar-inner { width: 988px; height: 36px; margin: 0 auto; position: relative; }
+
+
+/* MW Demo Bar - dropdown */
+#mw-demo-bar .mw-demo-dropdown, #mw-demo-bar .mw-demo-dropdown dd, #mw-demo-bar .mw-demo-dropdown dt, #mw-demo-bar .mw-demo-dropdown ul { margin:0; padding:0; }
+#mw-demo-bar .mw-demo-dropdown dd { position:relative; }
+#mw-demo-bar .mw-demo-dropdown dt a { display:block; height: 17px; margin-top: 7px; padding: 3px 8px; color: #fff; }
+#mw-demo-bar .mw-demo-dropdown ul {
+    list-style:none; padding:5px 0px; position:absolute; left: 3px; top:0;
+    background: #333; background: rgba(20,20,20,.9); border: 1px solid #000; color: #bbb;
+    -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.6);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.6);
+    box-shadow: 0 1px 2px rgba(0,0,0,.6);
+    display:none;
+}
+#mw-demo-bar .mw-demo-dropdown ul li { margin: 0; padding: 0; list-style:none; background: none; }
+#mw-demo-bar .mw-demo-dropdown li a { display: block; padding: 4px 10px; color: #bbb; }
+#mw-demo-bar .mw-demo-dropdown li a:hover { background: #000; color: #fff; }
+
+/* MW Demo Bar - Elements */
+#mw-demo-bar-title, #mw-demo-bar-logo, #mw-demo-bar-colors-label, #mw-demo-bar-colors, #mw-demo-bar-buy, #mw-demo-bar-remove { position: absolute; top: 0; }
+#mw-demo-bar-logo, #mw-demo-bar-colors dt a, #mw-demo-bar-buy, #mw-demo-bar-remove { background: transparent url(assets/demo-bar-sprite.png) no-repeat; }
+
+/* MW Demo Bar - title */
+#mw-demo-bar-title { left: 100px; display:block; line-height: 36px; font-weight: bold; }
+
+/* MW Demo Bar - logo */
+#mw-demo-bar-logo { left: 0; display:block; height: 30px; width: 90px; margin-top: 4px; text-indent:-9999px; background-position: 0 0; }
+
+/* MW Demo Bar - styles dropdown label */
+#mw-demo-bar-colors-label { right: 387px; width: 80px; line-height: 36px; font-weight: bold; text-align: right; }
+
+/* MW Demo Bar - styles dropdown */
+#mw-demo-bar-colors { right: 214px; }
+#mw-demo-bar-colors dt a { width: 150px; background-position: -90px 0; }
+#mw-demo-bar-colors ul { width: 158px; }
+
+/* MW Demo Bar - buy now button */
+#mw-demo-bar-buy { right: 33px; height: 17px; width: 140px; margin-top: 7px; padding: 3px 8px; font-weight: bold; color: #fff; text-indent:-9999px; background-position: -256px 0; }
+
+/* MW Demo Bar - remove button */
+#mw-demo-bar-remove { display:  block; right: 0; width: 13px; height: 14px; margin-top: 12px; cursor: pointer; background-position: -412px 0; }

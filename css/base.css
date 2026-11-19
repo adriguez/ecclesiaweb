@@ -1,0 +1,27 @@
+.smallInput{padding:4px;background:url(../images/bg_input.gif) repeat-x;border:none;border-left:solid 1px #ccc;border-right:solid 1px #ccc;height:28px;}
+
+.bigInput{font-size:24px;width:685px;padding:4px;background:url(../images/bg_input_big.gif) repeat-x;border:none;border-left:solid 1px #ccc;border-right:solid 1px #ccc;height:32px;}
+
+select.smallInput{background:url(../images/bg_select.gif) repeat-x;height:24px;}
+.small { width:180px; }
+.medium { width:350px; }
+.mediumBig { width:685px; }
+.addnew {width:254px;}
+.addnew2 {width:190px;}
+.wide { width:890px; }
+
+.popular{border:solid 1px #7C6A44;padding:1px;}
+
+.bloqueLiturgia .liturgia{background:url(../images/bg_lectura.jpg) no-repeat bottom right #fff;}
+.bloqueLiturgia .santoral{background:url(../images/bg_santoral.jpg) no-repeat bottom right #fff;}
+.bloqueLiturgia .lectura{background:url(../images/bg_lectura.jpg) no-repeat bottom right #fff;}
+.bloqueLiturgia .comentario{background:url(../images/bg_comentario.jpg) no-repeat bottom right #fff;}
+.bloqueLiturgia .horas{background:url(../images/bg_horas.jpg) no-repeat bottom right #fff;}
+.bloqueLiturgia .hoydomingo{background:url(../images/bg_domingo.jpg) no-repeat bottom right #fff;}
+
+.cicloLink{font-size:14px;margin-right:20px;font-weight:bold;}
+
+.misas td{border:none;}
+.misas th{background:none;border-bottom:dotted 1px #000;padding:0;margin:0;}
+
+.descarga ul li span{display:block;margin-top:10px;}

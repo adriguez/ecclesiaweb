@@ -1,0 +1,79 @@
+<?php if($idparroquia == 1667) $clase = "col-lg-9 col-md-9 contenido"; 
+else $clase = "col-lg-6 col-md-8 contenido col-lg-push-3 col-md-push-4";
+ ?>
+
+<div class="<?=$clase;?>" id="contenido-central">
+
+			<?php if(isset($_GET['sec']) && $_GET['sec'] != "") $sec = addslashes($_GET['sec']); else $sec = "index";
+
+				switch($sec)
+				{
+					case "noticia";
+						include('noticia.php');
+					break;
+					case "noticias";
+						if($idparroquia == 1667) include('noticias_1667.php');
+						else include('noticias.php');
+					break;
+					case "estaticas";
+						include('estatica.php');
+					break;
+					case "galeria";
+						include('galeria.php');
+					break;
+
+					case "politica";
+						include('politica.php');
+					break;
+
+					case "cookies";
+						include('cookies.php');
+					break;
+
+					case "avisolegal";
+						include('aviso-legal.php');
+					break;
+					case "eventos";
+						include('eventos.php');
+					break;
+
+					case "liturgia";
+						include('liturgia.php');
+					break;
+
+					case "grupos";
+						include('grupos.php');
+					break;
+
+					case "contacto";
+						include('contacto.php');
+					break;
+
+					case "oraciones";
+						include('oraciones.php');
+					break;
+
+					case "misas";
+						include('misas.php');
+					break;
+
+					case "documentos";
+						include('documentos.php');
+					break;
+
+					case "especial";
+						include('especial.php');
+					break;
+
+					case "oracionesNew";
+						include('oracionesForm.php');
+					break;
+
+					default:
+						if($idparroquia == 1667) include('noticias_1667.php');
+						else include('noticias.php');
+					break;
+				}
+			?>		
+
+</div>

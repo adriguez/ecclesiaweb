@@ -1,0 +1,50 @@
+/* PHP Event Calendar CSS */
+
+.list { margin: 0 auto; width: 380px; padding: 10px; background-color: #fff; }
+#event_row { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dotted #ccc; }
+#event_row_last { padding-bottom: 5px; }
+
+#calendar, #eventos-dia { margin: 0 auto;margin-bottom: 15px; overflow: hidden; }
+#calendar, #eventos-dia, .contenedorNuevo { background-color: #fff; border: 1px solid #cbcbcb; -moz-border-radius: 5px; -webkit-border-radius:5px;margin-top:10px; }
+
+#calendar_wrap { width: 420px; margin:0 auto 0 auto; overflow: hidden; text-align: left;}
+#calendar_wrap .title_bar { font-weight: bold; color: #1C1C1C; text-align: center;  border:1px solid #fff; margin-bottom:15px; margin-top:10px; }
+#calendar_wrap .title_bar .previous { float: left; display: block; width: 25px; height: 20px; background: url(assets/previous_month.gif) left top no-repeat; margin-top:10px; margin-left:10px;  }
+#calendar_wrap .title_bar .next { float: right; display: block; width: 25px; height: 20px; background: url(assets/next_month.gif) right top no-repeat; margin-top:10px; margin-right:10px;  }
+#calendar_wrap .title_bar .month {  margin:10px auto; padding-bottom:0 !important; padding-bottom:10px; }
+#calendar_wrap .title_bar h2 {      }
+
+.cal_day { position: relative; float: left; margin: 0 4px 4px 0 !important; margin:0 4px -24px 0; width: 53px; height: 40px; background: url(assets/day.png) top no-repeat; }
+
+.hoyy{background: url(assets/day-today.png) top no-repeat;color:#aa0000;}
+
+.cal_day .day_heading { position: relative; float: left; width: 20px; height: 14px; top:-1px;padding: 6px;padding-top:0px;padding-bottom:0px; text-transform: uppercase; font-size: 10px; color: #FFF; }
+.cal_day .day_number { width: 100%; font-size: 18px; font-weight: normal; color: #2b2b2b; height:20px; text-align: center; z-index:999; clear:left;padding-top:0px; }
+.cal_day .day_number.today { color: #aa0000; }
+
+.last_month, .next_month {
+	filter:alpha(opacity=20);
+	-moz-opacity:0.2;
+	-khtml-opacity: 0.2;
+	opacity: 0.2;
+}
+
+.previous, .next{position:relative;top:10px;}
+.next{right:10px;}
+
+.hoyy .today{color:#aa0000;}
+
+span.event { width:15px; margin-top: -1px; padding:2px 0 !important; padding:1px 0 1px; display:inline-block; text-align:center; background-color: #000; opacity:0.4; filter:alpha(opacity=40); -moz-border-radius: 8px; -webkit-border-radius:8px; }
+
+.cal_dayespacio { position: relative; float: left; margin: 0 4px 4px 0 !important; margin:0 4px -24px 0; width: 53px; height: 40px; }
+
+#eventos-dia, .contenedorNuevo{padding:10px;}
+#eventos-dia .title_bar h2{font-weight:normal;padding-bottom:3px;margin-bottom:3px;font-size:22px;}
+#eventos-dia .title_bar{border-bottom:dotted 1px #333;}
+
+
+.otras-litur{font-size:14px;}
+.otras-litur a{font-size:14px;}
+.actual{color:#7c6a44;font-weight:bold;}
+
+.month img{float:left;margin-right:5px;position:relative;top:3px;}

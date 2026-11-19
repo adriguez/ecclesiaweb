@@ -1,0 +1,288 @@
+<?php
+
+	$seo = getDatosSeo($_GET['sec']);
+
+	$valores = getValue("SELECT titulo, descripcion, titulo_logo, lat, lng, poblacion, diocesis FROM configuracion_base WHERE parroquia = $idparroquia",0);
+
+	$onload = "";
+	$mapa = false;
+
+	// *********************************
+	// *** MAPA DE GOOGLE PARA CONTACTO
+	// *********************************
+
+	if(isset($_GET['sec']) && $_GET['sec'] == "estaticas" && isset($_GET['m']) && $_GET['m'] > 0)
+	{
+		$txtint = getValue("SELECT txt_int FROM paginas WHERE parroquia = $idparroquia AND id = ".intval($_GET['m']),1);
+
+		if($txtint == "donde-esta")
+		{
+
+			if($valores[3] != "" && $valores[4] != "")
+			{
+				$lat = $valores[4];
+				$lng = $valores[3];
+				$mapa = true;
+				$onload = "onload=\"initialize()\"";
+			}
+		}
+	}
+
+	// *********************************
+	// *********************************
+	// *********************************
+
+	if(!isset($seo['title']) || $seo['title'] == "") $seo['title'] = $valores[0];
+	if(!isset($seo['description']) || $seo['description'] == "") $seo['description'] = "Bienvenidos a la página web de ".$valores[0];
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?=$seo['title'];?></title>
+	<meta name="description" content="<?=$seo['description'];?>" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link rel="stylesheet" href="<?=$urlOri;?>css/jquery.fancybox.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <link href="<?=$urlOri;?>css/bootstrap.min.css" rel="stylesheet">
+    <script src="<?=$urlOri;?>js/bootstrap.min.js"></script>    
+
+	<link rel="stylesheet" type="text/css" href="<?=$urlOri;?>css/jquery.qtip.css" />
+	<script type="text/javascript" src="<?=$urlOri;?>js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="<?=$urlOri;?>js/jquery.scrollTo.js"></script>
+	<script type="text/javascript" src="<?=$urlOri;?>js/jquery.fancybox.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="<?=$urlOri;?>js/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="<?=$urlOri;?>js/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<script type="text/javascript" src="<?=$urlOri;?>js/jquery.cycle.all.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="<?=$urlOri;?>css/base.css" />
+
+	<script type="text/javascript" src="<?=$urlOri;?>js/funciones.js"></script>
+
+	<script type="text/javascript" src="<?=$urlOri;?>js/jquery.easing.1.3.js"></script>
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDnrLkAyZNt03zQiObnaKb5jJi9ry6s3vo&sensor=false&language=es"></script>
+
+	<link rel="stylesheet" type="text/css" media="all" href="<?=$urlOri;?>templates/mintra/css/style_resp.css">
+
+	<script type="text/javascript" src="<?=$urlOri;?>templates/mintra/js/superfish.js"></script>
+	<script type="text/javascript" src="<?=$urlOri;?>templates/mintra/js/jquery.js"></script>
+	<script type="text/javascript" src="<?=$urlOri;?>templates/mintra/js/jquery_002.js"></script>
+	<script type="text/javascript" src="<?=$urlOri;?>templates/mintra/js/cufon-yui.js"></script>
+	<style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style>
+	<script type="text/javascript" src="<?=$urlOri;?>templates/mintra/js/Trebuchet_MS_700.js"></script>
+
+	<?php if($idparroquia == 1 && isset($_GET['sec']) && $_GET['sec'] == "noticia")
+	{
+		$sql = "SELECT * FROM noticias_fotos WHERE parroquia = $idparroquia AND idnoticia = ".intval($_GET['m'])." ORDER BY idfoto ASC LIMIT 1";
+		$rs = mysql_query($sql,$conex) or die (mysql_error());
+
+		$imagenes = "";
+		$imagenPrimera = "";
+		$conta = 0;
+
+		if(mysql_num_rows($rs) == 1)
+		{
+			$fila = mysql_fetch_assoc($rs);
+
+			$urlFoto = $urlOri."uploads/".$fila['parroquia']."/noticias/big_".$fila['foto'];
+
+			echo "<meta name=\"og:image\" content=\"$urlFoto\" />";
+		}
+	}
+	?>
+
+  	<script type="text/javascript">
+  	// initialise plugins
+		jQuery(function(){
+			
+			//tpsy
+				if(jQuery('.lnktit').length > 0){
+					jQuery('.lnktit').tipsy({gravity:'sw'});
+				}
+
+			jQuery('#fade').cycle();
+
+			jQuery('#events').cycle({
+				fx:        'turnDown',
+				direction: 'down',
+				speed: 1200,
+				timeout: 3000,
+				pauseOnPagerHover: true
+			});
+
+		});
+
+
+  	</script>
+	<script type="text/javascript">
+			Cufon.replace('.logoFondo h1 a, .logoFondo h2 a', { fontFamily: 'Trebuchet MS', textShadow:"0 2px rgba(0, 0, 0, .5)", color: '-linear-gradient(#fdfbf7 #fdfbf7 #fdfbf7, #F5CD96 #F5CD96 #F5CD96)' });
+	</script>
+
+	<base href="<?=$urlOri;?>" />
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+<body <?=$onload;?> class="parroquia-<?=$idparroquia;?>">
+
+    <nav class="navbar navbar-mintra navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav menuSuperior">
+				<?php if($idparroquia != 1 && $idparroquia != 408){ ?><li><a href="<?=$urlOri;?>">Inicio</a></li><?php }else{
+
+				if($idparroquia == 1){ ?>
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sacramentos <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?=$urlOri;?>bautismo/141/" title="Bautismo">Bautismo</a></li>
+						<li><a href="<?=$urlOri;?>confirmacion/140/" title="Confirmación">Confirmación</a></li>
+						<li><a href="<?=$urlOri;?>primera-comunion/199/" title="Primera Comunión">Primera Comunión</a></li>
+						<li><a href="<?=$urlOri;?>confesion/201/" title="Confesión">Confesión</a></li>
+						<li><a href="<?=$urlOri;?>matrimonio/195/" title="Matrimonio">Matrimonio</a></li>
+						<li><a href="<?=$urlOri;?>uncion-de-enfermos/200/" title="Unción de enfermos">Unción de enfermos</a></li>
+					</ul>
+				</li>
+
+				<?php }else if($idparroquia == 408){ ?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sacramentos <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?=$urlOri;?>bautismo/655/" title="Bautismo">Bautismo</a></li>
+						<li><a href="<?=$urlOri;?>confirmacion/656/" title="Confirmación">Confirmación</a></li>
+						<li><a href="<?=$urlOri;?>primera-comunion/657/" title="Primera Comunión">Primera Comunión</a></li>
+						<li><a href="<?=$urlOri;?>confesion/658/" title="Confesión">Confesión</a></li>
+						<li><a href="<?=$urlOri;?>matrimonio/659/" title="Matrimonio">Matrimonio</a></li>
+						<li><a href="<?=$urlOri;?>uncion-de-enfermos/660/" title="Unción de enfermos">Unción de enfermos</a></li>
+					</ul>
+				</li>
+				<?php } } ?>
+				<?php
+
+					$id = getValue("SELECT id FROM paginas WHERE (txt_int = 'historia' OR txt_int = 'donde-esta' OR txt_int = 'horarios' OR txt_int = 'saluda' OR txt_int = 'parroquia-sant-jordi' OR txt_int = 'parroquia-san-francisco-de-paula') AND parroquia = $idparroquia LIMIT 1",1);
+
+					if($id > 0)
+					{
+						echo "<li class=\"dropdown\">
+						<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">La parroquia <span class=\"caret\"></span></a>\n
+						<ul class=\"dropdown-menu\">\n";
+
+						$id = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'historia' AND parroquia = $idparroquia",0);
+						$titulo1 = $id[1];
+						$id = $id[0];
+
+						$id2 = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'donde-esta' AND parroquia = $idparroquia",0);
+						$titulo2 = $id2[1];
+						$id2 = $id2[0];
+
+						$id3 = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'horarios' AND parroquia = $idparroquia",0);
+						$titulo3 = $id3[1];
+						$id3 = $id3[0];
+
+						$id4 = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'saluda' AND parroquia = $idparroquia",0);
+						$titulo4 = $id4[1];
+						$id4 = $id4[0];
+
+						$id5 = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'parroquia-sant-jordi' AND parroquia = $idparroquia",0);
+						$titulo5 = $id5[1];
+						$id5 = $id5[0];
+
+						$id6 = getValue("SELECT id, titulo FROM paginas WHERE txt_int = 'parroquia-san-francisco-de-paula' AND parroquia = $idparroquia",0);
+						$titulo6 = $id6[1];
+						$id6 = $id6[0];
+
+							if($id > 0) echo "<li><a href=\"".$urlOri."historia/".$id."/\">".$titulo1."</a></li>\n";
+							if($id2 > 0) echo "<li><a href=\"".$urlOri."donde-esta/".$id2."/\">".$titulo2."</a></li>\n";  
+							if($id3 > 0) echo "<li><a href=\"".$urlOri."horarios/".$id3."/\">".$titulo3."</a></li>\n"; 
+							if($id4 > 0) echo "<li><a href=\"".$urlOri."saluda/".$id4."/\">".$titulo4."</a></li>\n"; 
+							if($id5 > 0) echo "<li><a href=\"".$urlOri."parroquia-sant-jordi/".$id5."/\">".$titulo5."</a></li>\n"; 
+							if($id6 > 0) echo "<li><a href=\"".$urlOri."parroquia-san-francisco-de-paula/".$id6."/\">".$titulo6."</a></li>\n"; 
+						echo "</ul></li>";
+					}
+
+				?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oración y Liturgia <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<?=$urlOri;?>oraciones-y-liturgia/" title="Liturgia de las horas y Palabra de Dios hoy">Liturgia de las horas y Palabra de Dios hoy</a></li>
+					
+						<?php if($idparroquia <> 339){
+							//(OM) 23/07/2018 En la seccion de Oracion y Liturgia deshabilitar la "LEctura de la misa en varios idiomas" 
+							//  PARROQUIA SANTA MARÍA DE GUADALUPE - MEXICO
+						?>
+						<li><a href="<?=$urlOri;?>misa-en-varios-idiomas/" title="Lectura de la misa en diferentes idiomas">Lectura de la misa en diferentes idiomas</a></li>
+						<?php } ?>
+
+					</ul>
+				</li>
+				<li><a href="<?=$urlOri;?>grupos-parroquiales.html" title="Grupos Parroquiales">Grupos Parroquiales</a>
+				</li>
+				<li><a href="<?=$urlOri;?>eventos.html" title="Agenda">Agenda</a></li>
+				<li><a href="<?=$urlOri;?>documentos/" title="Documentos">Documentos</a></li>
+				<?php
+
+				if($idparroquia == 1 || $idparroquia == 408){
+					echo "<li><a href=\"https://www.donoamiiglesia.es/es\" target=\"_blank\" title=\"Dono a mi Iglesia\">Dono a mi Iglesia</a></li>\n";
+				}else{
+					$id = getValue("SELECT id FROM paginas WHERE txt_int = 'donativos' AND parroquia = $idparroquia LIMIT 1",1);
+					if($id > 0) echo "<li><a href=\"".$urlOri."donativos/".$id."/\">Donativos</a></li>\n";
+				}
+
+
+				?>
+				<li><a href="<?=$urlOri;?>contacto.html" title="Contactar con la parroquia">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+<div class="container">
+
+    		<div class="row logoFondo">
+    			<div class="col-md-2 hidden-sm hidden-xs">
+
+    				<img class="jes" src="<?=$urlOri;?>templates/mintra/images/jes-mintra.png" />
+
+    			</div>
+    			<div class="col-md-<?php if($idparroquia != 1 && $idparroquia != 408) echo "10"; else echo "8"; ?>">
+    				<?php if($idparroquia == 408){ ?>
+	      	         <h1 style="margin-left:60px;font-size:40px;line-height:70px;text-align:center;margin-top:25px;letter-spacing:10px;<?php if($idparroquia == 1) echo "margin-left:20px;"; ?>"><a href="<?=$urlOri;?>" title="<?=$valores[2];?> - <?=$valores[5];?>">Parroquia<br><span style="margin-top:20px;position: relative;top:12px;">Patriarca San José</span></a></h1>
+    				<?php }else{ ?>
+    					<h1 style="line-height:42px;text-align:center;margin-top:20px;letter-spacing:12px;<?php if($idparroquia == 1) echo "margin-left:20px;"; ?>"><a href="<?=$urlOri;?>" title="<?=$valores[2];?> - <?=$valores[5];?>"><?=$valores[2];?></a></h1>
+    				<?php } ?>
+    			</div>
+    			<?php if($idparroquia == 1){ ?>
+    			<div class="col-md-2 hidden-sm hidden-xs">				
+						<img style="float:right;margin-right:35px;" src="http://www.nuestraseñorademontserrat.es/templates/nuevo2/images/moreneta_logo.png" />
+    			</div>
+    			<?php }else if($idparroquia == 408){ ?>
+    			<div class="col-md-2 hidden-sm hidden-xs">				
+						<img style="float:right;position:relative;left:15px;" src="http://www.parroquiapatriarcasanjose.com/templates/nuevo2/images/sanjose.png" />
+    			</div>
+    			<?php } ?>
+    		</div>
+
+    <div class="row">
