@@ -3,7 +3,7 @@
 
 
 $mysqlUser = "gestion_user";
-$mysqlPwd = "ges569";
+$mysqlPwd = "n@hF0z460";
 $dbname = "gestion";
 $conexGestion = mysql_connect('localhost', $mysqlUser, $mysqlPwd);
 mysql_select_db($dbname,$conexGestion);
