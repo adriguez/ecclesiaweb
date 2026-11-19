@@ -1,7 +1,7 @@
 <?php
   if (isset($_GET['sec'])) {
     $seo = getDatosSeo($_GET['sec']);
-  } else { $seo='';}
+  } else { $seo = array(); /* PHP 8: '' ya no se convierte en array */ }
 
   $valores = getValue("SELECT titulo, descripcion, titulo_logo, lat, lng, poblacion, diocesis FROM configuracion_base WHERE parroquia = $idparroquia",0);
 
