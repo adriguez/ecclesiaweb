@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/../../_includes/php8_compat.php'); // Compatibilidad PHP 8
 class DBConnection{
 	function getConnection(){
 	  //change to your database server/user name/password

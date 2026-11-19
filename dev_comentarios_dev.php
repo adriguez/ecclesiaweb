@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/_includes/php8_compat.php'); // Compatibilidad PHP 8
 
 	include('_includes/config.php');
 
@@ -94,7 +94,7 @@
 					$cabeceras .= "X-Mailer: PHP/". phpversion()."\n";
 					$cabeceras .= "Content-type: text/html\r\n";
 
-					if(mail($emailParroquia, $asunto, $msg,$cabeceras))
+					if(correo_mail($emailParroquia, $asunto, $msg,$cabeceras))
 					{
 						mysql_query("INSERT INTO comentarios_noticias (noticia, parroquia, ip, comentario, nombre, activar) VALUES ('$idnoticia', '$idparroquia', '$ip', '$comentario', '$nombre', 0 )",$conex) or die (mysql_error());
 						$idCom = mysql_insert_id($conex);
@@ -132,7 +132,7 @@
 								$idusuario = $rw['id'];
 								$email = $rw['email'];
 
-								if($email != "" && $email != $emailParroquia) mail($email, $asunto, $msg,$cabeceras);
+								if($email != "" && $email != $emailParroquia) correo_mail($email, $asunto, $msg,$cabeceras);
 
 								mysql_query("INSERT INTO comunicacion (de, para, asunto, mensaje, fecha, msg_web) VALUES (6, '$idusuario', 'Nuevo comentario en tu página web', '$msg', NOW(), 1)",$conex);
 							}						

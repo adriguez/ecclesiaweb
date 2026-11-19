@@ -580,6 +580,12 @@ class MAIL5 {
 	}
 
 	public function send($resc = null, $debug = null) {
+		// Servidor de pruebas: no se envian correos reales (ver _includes/php8_compat.php)
+		if ((defined('CORREO_MODO_PRUEBAS') && CORREO_MODO_PRUEBAS) || strpos(str_replace('\\', '/', __DIR__), '/vhosts/mintrared.es/') !== false) {
+			$d = array(); foreach (array_merge($this->To, $this->Cc, $this->Bcc) as $x) $d[] = $x['address'];
+			if (function_exists('correo_pruebas_log')) correo_pruebas_log('XPertMailer', $d, $this->Subject, 'NO ENVIADO');
+			return true;
+		}
 		global $_RESULT;
 		$_RESULT = $err = array();
 		if (!FUNC5::is_debug($debug)) $debug = debug_backtrace();

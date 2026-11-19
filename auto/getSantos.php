@@ -1,6 +1,6 @@
 <?php
 
-include('/var/www/vhosts/mintrared.com/subdomains/web/httpdocs/_includes/config.php');
+include(__DIR__ . '/../_includes/config.php');
 
 /*
 $sql = "SELECT id, titulo, contenido, dia FROM santoral WHERE dia >= '2025-01-01' AND dia <= '2025-12-31' ORDER BY dia ASC";

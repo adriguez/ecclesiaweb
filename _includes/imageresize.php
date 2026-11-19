@@ -31,10 +31,16 @@ class thumbnail
 {
 	var $img;
 
+	// PHP 8: un metodo con el nombre de la clase ya no actua como constructor
+	function __construct($imgfile)
+	{
+		$this->thumbnail($imgfile);
+	}
+
 	function thumbnail($imgfile)
 	{
 		//detect image format
-		$this->img["format"]=@ereg_replace(".*\.(.*)$","\\1",$imgfile);
+		$this->img["format"]=@preg_replace('/.*\.(.*)$/',"\\1",$imgfile);
 		$this->img["format"]=strtoupper($this->img["format"]);
 
 		if ($this->img["format"]=="JPG" || $this->img["format"]=="JPEG") {

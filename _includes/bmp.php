@@ -21,6 +21,8 @@ class BMP
 	}
 }
 
+// PHP 7.2+ ya incluye imagebmp()/imagecreatefrombmp(): solo se declaran si no existen (evita "Cannot redeclare")
+if (!function_exists('imagebmp')) {
 function imagebmp(&$img, $filename = false)
 {
 	$wid = imagesx($img);
@@ -85,7 +87,9 @@ function imagebmp(&$img, $filename = false)
 		}
 	}
 }
+}
 
+if (!function_exists('imagecreatefrombmp')) {
 function imagecreatefrombmp($filename)
 {
     $f = fopen($filename, "rb");
@@ -127,6 +131,7 @@ function imagecreatefrombmp($filename)
 	
 	return $img;
 }	
+}
 
 function dwordize($str)
 {

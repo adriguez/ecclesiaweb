@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/_includes/php8_compat.php'); // Compatibilidad PHP 8
 
 	include('_includes/config.php');
 
@@ -150,7 +150,7 @@
 						$cabeceras .= "X-Mailer: PHP/". phpversion()."\n";
 						$cabeceras .= "Content-type: text/html\r\n";
 	
-						if(mail($emailContacto, $asunto, $msg,$cabeceras)){
+						if(correo_mail($emailContacto, $asunto, $msg,$cabeceras)){
 							mysql_query("INSERT INTO contactos_grupos (email, parroquia, mensaje, telefono, nombre, ip, destino) VALUES ('$email', '$idparroquia', '$mensaje', '$telefono', '$nombre', '$ip', '$idGrupo')",$conex) or die (mysql_error());
 
 							$txtIntGrupo = limpiarCadena($nombreGrupo, 'archivo')."_".$idGrupo.".html";
@@ -185,7 +185,7 @@
 						$cabeceras .= "X-Mailer: PHP/". phpversion()."\n";
 						$cabeceras .= "Content-type: text/html\r\n";
 	
-						if(mail($emailParroquia, $asunto, $msg,$cabeceras))
+						if(correo_mail($emailParroquia, $asunto, $msg,$cabeceras))
 						{
 							mysql_query("INSERT INTO contactos (email, parroquia, mensaje, telefono, nombre, apellidos, ip) VALUES ('$email', '$idparroquia', '$mensaje', '$telefono', '$nombre', '$apellidos', '$ip')",$conex) or die (mysql_error());
 	

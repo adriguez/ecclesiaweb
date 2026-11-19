@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/_includes/php8_compat.php'); // Compatibilidad PHP 8
 
 if ($_SERVER['REMOTE_ADDR'] == "90.173.201.22") {
   ini_set('display_errors','1');
@@ -87,7 +87,7 @@ if ($_SERVER['REMOTE_ADDR'] == "90.173.201.22") {
 					$cabeceras .= "X-Mailer: PHP/". phpversion()."\n";
 					$cabeceras .= "Content-type: text/html\r\n";
 
-					if(mail($emailParroquia, $asunto, $msg,$cabeceras))
+					if(correo_mail($emailParroquia, $asunto, $msg,$cabeceras))
 					{
 						mysql_query("INSERT INTO contactos (email, parroquia, mensaje, nombre, apellidos, ip, telefono) VALUES ('$email', '$idparroquia', '$mensaje', '$nombre', '$apellidos', '$ip', '$telefono')",$conex) or die (mysql_error());
 
@@ -123,7 +123,7 @@ if ($_SERVER['REMOTE_ADDR'] == "90.173.201.22") {
 							{
 								$idusuario = $rw['id'];
 								$email = $rw['email'];
-								if($email != "" && $email != $emailParroquia) mail($email, $asunto, $msg,$cabeceras);
+								if($email != "" && $email != $emailParroquia) correo_mail($email, $asunto, $msg,$cabeceras);
 								mysql_query("INSERT INTO comunicacion (de, para, asunto, mensaje, fecha, msg_web) VALUES (6, '$idusuario', 'Nueva petición de oración desde tu página web', '$msg', NOW(), 1)",$conex);
 							}						
 						}

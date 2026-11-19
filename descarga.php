@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/_includes/rutas.php'); // RUTA_WEB_BASE / RUTA_WEB_UPLOADS
 
 		include('_includes/config.php');
 
@@ -13,8 +13,8 @@
 			$parroquia = getValue("SELECT parroquia FROM documentos WHERE documento = '$archivoToSearch' LIMIT 1",1);
 			if($parroquia == "") $parroquia = getValue("SELECT parroquia FROM galeria_fotos WHERE foto = '".str_replace("big_","",$archivoToSearch)."' LIMIT 1",1);
 
-			$targetDirAlt = "/var/www/vhosts/mintrared.com/subdomains/web/httpdocs/documentos/";
-			$targetDir = "/var/www/vhosts/mintrared.com/subdomains/web/httpdocs/uploads/".$parroquia."/";
+			$targetDirAlt = RUTA_WEB_BASE."documentos/";
+			$targetDir = RUTA_WEB_UPLOADS.$parroquia."/";
 
 			if(substr_count($archivo, "uploads/") > 0)
 			{
@@ -28,7 +28,7 @@
 				$withUrl = true;
 			}
 			else{
-				$archivo = "http://web.mintrared.com/".str_replace("/var/www/vhosts/mintrared.com/subdomains/web/httpdocs/","",$targetDir).$archivo;
+				$archivo = "http://web.mintrared.com/".str_replace(RUTA_WEB_BASE,"",$targetDir).$archivo;
 			}
 
 			$archivo = trim($archivo);

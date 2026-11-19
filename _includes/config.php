@@ -1,4 +1,4 @@
-<?php
+<?php require_once(__DIR__ . '/php8_compat.php'); // Compatibilidad PHP 8
 
 if($_SERVER['REMOTE_ADDR'] == "81.203.80.2171")
 {

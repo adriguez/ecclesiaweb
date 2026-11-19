@@ -6,7 +6,7 @@
 
 					<div class="text-noticia">
 		
-						<? $datos = getEspecial(); ?>
+						<?php  $datos = getEspecial(); ?>
 
 							<ul style="margin-left:0px;">
 								<?=$datos;?>

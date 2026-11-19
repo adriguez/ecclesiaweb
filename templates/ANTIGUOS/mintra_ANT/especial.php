@@ -2,7 +2,7 @@
 			<h2>Auxiliares Parroquiales de Cristo Sacerdote</h2>
 			<div id="post-content" style="padding-top:20px;">
 		
-				<? $datos = getEspecial(); ?>
+				<?php  $datos = getEspecial(); ?>
 
 				<ul style="margin-left:0px;">
 					<?=$datos;?>

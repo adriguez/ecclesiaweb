@@ -1,6 +1,6 @@
 <?php
 
-include('/var/www/vhosts/mintrared.com/subdomains/web/httpdocs/_includes/config.php');
+include(__DIR__ . '/../_includes/config.php');
 
 $arrayDias = array("01" => 31, "02" => 29, "03" => 31, "04" => 30, "05" => 31, "06" => 30, "07" => 31, "08" => 31, "09" => 30, "10" => 31, "11" => 30, "12" => 31);
 //$arrayDias = array("01" => 31);

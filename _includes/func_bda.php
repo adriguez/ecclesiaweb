@@ -683,13 +683,13 @@ function punycode_to_unicode($input) {
 	$is_first = true; $bias = 72; $idx = 0;  $char = 0x80; $decoded = array();	$output='';
 
 	$delim_pos = strrpos($encoded, '-');
-	if ($delim_pos > strlen($prefix)) { for ($k = strlen($prefix); $k < $delim_pos; ++$k) { $decoded[] = ord($encoded{$k}); } }
+	if ($delim_pos > strlen($prefix)) { for ($k = strlen($prefix); $k < $delim_pos; ++$k) { $decoded[] = ord($encoded[$k]); } }
 	$deco_len = count($decoded);
 	$enco_len = strlen($encoded);
 
 	for ($enco_idx = $delim_pos ? ($delim_pos + 1) : 0; $enco_idx < $enco_len; ++$deco_len) {        
 		for ($old_idx = $idx, $w = 1, $k = $base; 1 ; $k += $base) {
-			$cp = ord($encoded{$enco_idx++});
+			$cp = ord($encoded[$enco_idx++]);
         			$digit = ($cp - 48 < 10) ? $cp - 22 : (($cp - 65 < 26) ? $cp - 65 : (($cp - 97 < 26) ? $cp - 97 : $base));
                 		$idx += $digit * $w;
                 		$t = ($k <= $bias) ? $tmin : (($k >= $bias + $tmax) ? $tmax : ($k - $bias));
@@ -1447,7 +1447,7 @@ function getNumerosRevista($idparroquia, $destino_pagina=0)
 }
 
 
-function getNoticias($tipo, $diocesis=false,$tipo=0)
+function getNoticias($tipo_no_usado, $diocesis=false,$tipo=0) // PHP 5.6: con $tipo repetido valía el 3.er argumento
 {
 	global $idparroquia, $conex, $urlOri;
 
@@ -2580,8 +2580,8 @@ function dameMes($mes)
 		case 05; $mes = "Mayo"; $mesCorto = "may"; break;
 		case 06; $mes = "Junio"; $mesCorto = "jun"; break;
 		case 07; $mes = "Julio"; $mesCorto = "jul"; break;
-		case 08; $mes = "Agosto"; $mesCorto = "ago"; break;
-		case 09; $mes = "Septiembre"; $mesCorto = "sep"; break;
+		case 8; $mes = "Agosto"; $mesCorto = "ago"; break;
+		case 9; $mes = "Septiembre"; $mesCorto = "sep"; break;
 		case 10; $mes = "Octubre"; $mesCorto = "oct"; break;
 		case 11; $mes = "Noviembre"; $mesCorto = "nov"; break;
 		case 12; $mes = "Diciembre"; $mesCorto = "dic"; break;
